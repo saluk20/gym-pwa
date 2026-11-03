@@ -1,0 +1,28 @@
+@import '@fontsource-variable/inter';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body {
+    @apply bg-canvas font-sans text-ink antialiased;
+    font-weight: 400;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior-y: none;
+    touch-action: manipulation;
+  }
+  h1, h2, h3 { font-weight: 600; }
+  button { @apply select-none; }
+  input { @apply outline-none; }
+}
+
+@layer components {
+  .card { @apply rounded-card bg-card shadow-card; }
+  .btn-round { @apply grid h-11 w-11 place-items-center rounded-full bg-card shadow-card active:scale-95 transition-transform; }
+  .tap { @apply active:scale-95 transition-transform; }
+}
+
+/* Contenido nunca queda tras la barra flotante: 96px nav + safe area */
+.pb-nav { padding-bottom: calc(112px + env(safe-area-inset-bottom)); }
+.pt-safe { padding-top: max(env(safe-area-inset-top), 12px); }
