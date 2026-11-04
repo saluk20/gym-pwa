@@ -3,6 +3,22 @@
 @tailwind components;
 @tailwind utilities;
 
+:root, :root[data-theme='dark'] {
+  color-scheme: dark;
+  --c-canvas: 14 14 16; --c-card: 28 28 30; --c-card2: 42 42 45; --c-ink: 243 240 235; --c-muted: 154 154 160;
+  --c-brand: 255 107 53; --c-onbrand: 17 17 17; --c-hot: 229 56 59; --c-series: 245 165 36; --c-volume: 76 141 255;
+  --c-danger: 255 77 109; --c-rest: 52 199 123;
+  --sh-card: none; --sh-nav: 0 -1px 0 rgba(255,255,255,.07);
+}
+:root[data-theme='light'] {
+  color-scheme: light;
+  --c-canvas: 242 242 239; --c-card: 255 255 255; --c-card2: 242 242 239; --c-ink: 17 17 17; --c-muted: 138 138 144;
+  --c-onbrand: 255 255 255; --sh-card: 0 1px 2px rgba(17,17,17,.04), 0 8px 24px rgba(17,17,17,.05); --sh-nav: 0 -1px 0 rgba(17,17,17,.06);
+}
+:root[data-accent='rojo'] { --c-brand: 229 56 59; --c-hot: 255 138 92; }
+:root[data-accent='rojo'][data-theme='dark'] { --c-onbrand: 255 255 255; }
+:root[data-accent='blanco'] { --c-brand: 243 240 235; --c-onbrand: 17 17 17; }
+
 @layer base {
   html, body, #root { height: 100%; }
   body {
@@ -24,5 +40,5 @@
 }
 
 /* Contenido nunca queda tras la barra flotante: 96px nav + safe area */
-.pb-nav { padding-bottom: calc(112px + env(safe-area-inset-bottom)); }
+.pb-nav { padding-bottom: calc(104px + env(safe-area-inset-bottom)); }
 .pt-safe { padding-top: max(env(safe-area-inset-top), 12px); }

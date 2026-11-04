@@ -1,5 +1,5 @@
 // Estado derivado del programa: semana actual por día, siguiente día, métricas semanales.
-import routine from '../data/routine.json';
+import routine from '../data/routine.json' with { type: 'json' };
 import { lastPerformance, suggest, DEFAULT_STEP } from './progression.js';
 
 export const { days, weeks } = routine;
@@ -7,17 +7,25 @@ export const dayById = (id) => days.find((d) => d.id === id);
 export const exById = (id) => days.flatMap((d) => d.exercises).find((e) => e.id === id);
 const LAST_WEEK = weeks.length - 1;
 
-/** Índice de semana del próximo entreno de un día: 1ª semana tras el último dato del Excel + sesiones hechas en la app. */
-export function cursorOf(day, sessions) {
-  const n = sessions.filter((s) => s.dayId === day.id && s.finishedAt).length;
-  return Math.min(LAST_WEEK, day.lastWeek + 1 + n);
-}
+export const DEFAULT_WEEK = 5; // "Semana 5" (índice en weeks)
+
+/** Semana global del ciclo: la misma para todos los días (nunca se arranca desde un hueco). */
+export const currentWeek = (state) => Math.min(LAST_WEEK, Math.max(0, state.settings.weekIndex ?? DEFAULT_WEEK));
+export const cursorOf = (_day, state) => currentWeek(state);
 export const isDeloadWeek = (wi) => /^Descarga/i.test(weeks[wi] ?? '');
 
-/** Día siguiente = el de menor semana pendiente (empate: orden del programa). */
-export function nextDay(sessions) {
-  return [...days].sort((a, b) => cursorOf(a, sessions) - cursorOf(b, sessions) || a.n - b.n)[0];
+/** Un día está hecho en la semana wi si hay sesión terminada de esa semana o dato del Excel de esa semana. */
+export function dayDone(day, state, wi = currentWeek(state)) {
+  return (
+    state.sessions.some((s) => s.dayId === day.id && s.finishedAt && s.weekIndex === wi) ||
+    day.exercises.some((e) => e.history.some((h) => h.w === wi))
+  );
 }
+/** Día siguiente = primero del orden del programa que no está hecho en la semana actual. */
+export const nextDay = (state) => days.find((d) => !dayDone(d, state)) ?? days[0];
+/** Si todos los días están hechos en la semana actual, pasa a la siguiente. */
+export const weekComplete = (state) => days.every((d) => dayDone(d, state));
+export const lastWeekIndex = LAST_WEEK;
 
 export const stepOf = (ex, settings) => settings.steps?.[ex.id] ?? DEFAULT_STEP;
 

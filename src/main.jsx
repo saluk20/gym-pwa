@@ -4,5 +4,7 @@ import { registerSW } from 'virtual:pwa-register';
 import App from './App.jsx';
 import './index.css';
 
+import { startSync } from './lib/sync.js';
 registerSW({ immediate: true });
+startSync();
 createRoot(document.getElementById('root')).render(<App />);

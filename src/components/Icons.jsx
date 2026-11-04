@@ -23,3 +23,8 @@ export const ChevronRight = (p) => (<P {...p}><path d="m9 5 7 7-7 7" /></P>);
 export const ClockIcon = (p) => (<P {...p}><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></P>);
 export const PlayIcon = (p) => (<P {...p} fill="currentColor" sw={0}><path d="M8 5v14l11-7z" /></P>);
 export const BoltIcon = (p) => (<P {...p}><path d="M13 3 5 14h6l-1 7 8-11h-6z" /></P>);
+export const CalendarIcon = (p) => (<P {...p}><rect x="3.5" y="5" width="17" height="15.5" rx="3" /><path d="M3.5 10h17M8 3v4M16 3v4" /></P>);
+export const ListIcon = (p) => (<P {...p}><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01" /></P>);
+export const GearIcon = (p) => (<P {...p}><circle cx="12" cy="12" r="3" /><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1" /></P>);
+export const StarIcon = (p) => (<P {...p} fill="currentColor" sw={1}><path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z" /></P>);
+export const TrashIcon = (p) => (<P {...p}><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 11v6M14 11v6" /></P>);

@@ -1,25 +1,40 @@
 import { useSyncExternalStore } from 'react';
-import { dayById, suggestionFor, weeks, cursorOf } from './program.js';
+import { dayById, suggestionFor, weeks, cursorOf, weekComplete, lastWeekIndex, DEFAULT_WEEK } from './program.js';
+import { weekKey } from './plan.js';
 
 const KEY = 'gym-pwa:v1';
 const DEFAULTS = {
-  settings: { name: 'Lucas', deload: 0.9, sound: true, steps: {} },
+  settings: { name: 'Lucas', deload: 0.9, sound: true, steps: {}, weekIndex: DEFAULT_WEEK, updatedAt: 0 },
   sessions: [],
+  events: [], // { id, title, date, endDate, type: 'comp'|'trip'|'otro', main, updatedAt, deleted }
+  modes: {}, // { [lunes ISO]: { mode, updatedAt } } modo aplicado a esa semana ('' = quitado)
+  device: { theme: 'dark', accent: 'ember', syncKey: '', lastSync: 0, syncMsg: '' },
   rest: null, // { endsAt, total, label }
 };
 
 function load() {
   try {
     const raw = JSON.parse(localStorage.getItem(KEY));
-    if (raw && Array.isArray(raw.sessions)) return { ...DEFAULTS, ...raw, settings: { ...DEFAULTS.settings, ...raw.settings } };
+    if (raw && Array.isArray(raw.sessions)) return { ...structuredClone(DEFAULTS), ...raw, settings: { ...DEFAULTS.settings, ...raw.settings }, device: { ...DEFAULTS.device, ...raw.device } };
   } catch {}
   return structuredClone(DEFAULTS);
 }
 
+export function applyTheme(d) {
+  if (typeof document === 'undefined') return;
+  document.documentElement.dataset.theme = d.theme;
+  document.documentElement.dataset.accent = d.accent;
+  document.querySelector('meta[name=theme-color]')?.setAttribute('content', d.theme === 'dark' ? '#0E0E10' : '#F2F2EF');
+}
 let state = load();
+applyTheme(state.device);
 const subs = new Set();
+const hooks = new Set(); // cambios locales (para sincronizar)
+export const onChange = (f) => (hooks.add(f), () => hooks.delete(f));
 function commit(next) {
   state = next;
+  applyTheme(state.device);
+  hooks.forEach((f) => f());
   try {
     localStorage.setItem(KEY, JSON.stringify(state));
   } catch {}
@@ -47,14 +62,16 @@ export const actions = {
     }
     const day = dayById(dayId);
     const sets = {};
+    const soft = state.modes[weekKey(Date.now())]?.mode === 'suave';
     for (const ex of day.exercises) {
       const sug = suggestionFor(ex, day, state);
-      sets[ex.id] = Array.from({ length: ex.sets }, () => ({ w: sug.weight, r: sug.reps, done: false }));
+      const n = soft ? Math.max(1, ex.sets - 1) : ex.sets; // modo Suave: −1 serie, mismo peso
+      sets[ex.id] = Array.from({ length: n }, () => ({ w: sug.weight, r: sug.reps, done: false }));
     }
     const id = `s${Date.now()}`;
     commit({
       ...state,
-      sessions: [...state.sessions, { id, dayId, weekIndex: cursorOf(day, state.sessions), startedAt: Date.now(), finishedAt: null, sets }],
+      sessions: [...state.sessions, { id, dayId, weekIndex: cursorOf(day, state), startedAt: Date.now(), finishedAt: null, sets }],
     });
     return id;
   },
@@ -92,8 +109,10 @@ export const actions = {
     commit({
       ...state,
       rest: null,
-      sessions: state.sessions.map((x) => (x.id === sid ? { ...x, sets, finishedAt: Date.now() } : x)),
+      sessions: state.sessions.map((x) => (x.id === sid ? { ...x, sets, finishedAt: Date.now(), updatedAt: Date.now() } : x)),
     });
+    // Semana completa (todos los días hechos) → avanza a la siguiente.
+    if (weekComplete(state) && state.settings.weekIndex < lastWeekIndex) actions.setSetting({ weekIndex: state.settings.weekIndex + 1 });
   },
   discardSession(sid) {
     commit({ ...state, rest: null, sessions: state.sessions.filter((x) => x.id !== sid) });
@@ -110,22 +129,60 @@ export const actions = {
     if (state.rest) commit({ ...state, rest: null });
   },
   setSetting(patch) {
-    commit({ ...state, settings: { ...state.settings, ...patch } });
+    commit({ ...state, settings: { ...state.settings, ...patch, updatedAt: Date.now() } });
   },
   setStep(exId, step) {
-    commit({ ...state, settings: { ...state.settings, steps: { ...state.settings.steps, [exId]: step } } });
+    commit({ ...state, settings: { ...state.settings, steps: { ...state.settings.steps, [exId]: step }, updatedAt: Date.now() } });
+  },
+  setDevice(patch) {
+    commit({ ...state, device: { ...state.device, ...patch } });
+  },
+  addEvent(ev) {
+    commit({ ...state, events: [...state.events, { ...ev, id: `e${Date.now()}`, updatedAt: Date.now() }] });
+  },
+  deleteEvent(id) {
+    commit({ ...state, events: state.events.map((e) => (e.id === id ? { ...e, deleted: true, updatedAt: Date.now() } : e)) });
+  },
+  setMode(key, mode) {
+    commit({ ...state, modes: { ...state.modes, [key]: { mode, updatedAt: Date.now() } } });
   },
   exportBackup() {
-    return JSON.stringify({ app: 'gym-pwa', v: 1, exportedAt: new Date().toISOString(), settings: state.settings, sessions: state.sessions }, null, 1);
+    const { settings, sessions, events, modes } = state;
+    return JSON.stringify({ app: 'gym-pwa', v: 2, exportedAt: new Date().toISOString(), settings, sessions, events, modes }, null, 1);
   },
   importBackup(text) {
     const d = JSON.parse(text);
     if (d.app !== 'gym-pwa' || !Array.isArray(d.sessions)) throw new Error('Archivo no válido');
-    commit({ ...DEFAULTS, settings: { ...DEFAULTS.settings, ...d.settings }, sessions: d.sessions, rest: null });
+    commit({ ...state, ...mergeDocs(localDoc(state), d), rest: null });
+  },
+  /** Fusiona un documento remoto con el local (sync). Devuelve el documento resultante. */
+  mergeRemote(remote) {
+    const m = mergeDocs(localDoc(state), remote || {});
+    commit({ ...state, ...m });
+    return snapshot(state);
   },
   resetAll() {
-    commit(structuredClone(DEFAULTS));
+    commit({ ...structuredClone(DEFAULTS), settings: state.settings, device: state.device });
   },
 };
+
+export const snapshot = (s) => ({ settings: s.settings, sessions: s.sessions.filter((x) => x.finishedAt), events: s.events, modes: s.modes });
+
+const localDoc = (s) => ({ ...snapshot(s), openSessions: s.sessions.filter((x) => !x.finishedAt) });
+const byUpdated = (a, b) => ((b?.updatedAt ?? 0) > (a?.updatedAt ?? 0) ? b : a);
+/** Unión sin pérdidas: sesiones por id (gana la más reciente), eventos y modos por updatedAt, ajustes por updatedAt. */
+export function mergeDocs(local, remote) {
+  const mergeList = (a = [], b = []) => {
+    const m = new Map();
+    for (const x of [...a, ...b]) m.set(x.id, m.has(x.id) ? byUpdated(m.get(x.id), x) : x);
+    return [...m.values()];
+  };
+  const open = (local.openSessions ?? []);
+  const modes = { ...(remote.modes ?? {}) };
+  for (const [k, v] of Object.entries(local.modes ?? {})) modes[k] = byUpdated(modes[k], v);
+  const rs = remote.settings, ls = local.settings;
+  const settings = rs && (rs.updatedAt ?? 0) > (ls.updatedAt ?? 0) ? { ...ls, ...rs } : ls;
+  return { settings, sessions: [...mergeList(local.sessions, remote.sessions ?? []), ...open], events: mergeList(local.events, remote.events ?? []), modes };
+}
 
 export const weekLabel = (wi) => weeks[wi];

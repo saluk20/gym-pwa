@@ -1,0 +1,1342 @@
+{
+ "generatedFrom": "rutinas-antiguas.xlsx",
+ "routines": [
+  {
+   "id": "old-1",
+   "sheet": "1",
+   "title": "Rutina Julio - Octubre 2025",
+   "days": [
+    {
+     "name": "Espalda - Trapecio - Bíceps",
+     "exercises": [
+      {
+       "muscle": "Espalda",
+       "name": "Press Rumano",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Remo en T agarre neutro",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Jalon al pecho",
+       "sets": 2,
+       "reps": "",
+       "rir": "",
+       "restSec": 120,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Remo polea baja",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Trapecio",
+       "name": "Press trapecio",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 120,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Spider curl barra Z",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Elevaciones de gemelo",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Pecho - Hombro - Tríceps",
+     "exercises": [
+      {
+       "muscle": "Pecho",
+       "name": "Press banca multipower",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 240,
+       "log": []
+      },
+      {
+       "muscle": "Pecho",
+       "name": "Contractora",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pecho",
+       "name": "Cruce de poleas alta",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Laterales en palanca",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo polea alta",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Press frances barra Z",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Pierna",
+     "exercises": [
+      {
+       "muscle": "Pierna",
+       "name": "Curl femoral tumbado",
+       "sets": 2,
+       "reps": "",
+       "rir": "",
+       "restSec": 120,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Aductores en maquina",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Sentadilla en maquina Hack",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 240,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Extension de cuadriceps",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Curl femoral tumbado",
+       "sets": 2,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Aductores en maquina",
+       "sets": 2,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Prensa inclinada",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Elevaciones de gemelo",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Espalda - Hombro - Biceps",
+     "exercises": [
+      {
+       "muscle": "Espalda",
+       "name": "Remo T agarre neutro",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 120,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "remo en maquina agarre neutro unilateral",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "dominadas",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Pajaro en banco inclinado",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Curl martillo en banco simultaneo",
+       "sets": 2,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Curl banco scott",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Pecho - Hombro - Triceps",
+     "exercises": [
+      {
+       "muscle": "Pecho",
+       "name": "Press banca con mancuernas",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pecho",
+       "name": "Aperturas en banco inclinado poleas bajas",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Elevaciones laterales polea baja",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 120,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Laterales en banco tumbado de lado",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Frances con mancuernas",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo unilateral (p16)",
+       "sets": 2,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo banco inclinado agarre v",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "old-2",
+   "sheet": "2",
+   "title": "Rutina Noviembre 2025 - Enero 2026",
+   "days": [
+    {
+     "name": "Espalda - Trapecio - Tríceps",
+     "exercises": [
+      {
+       "muscle": "Espalda",
+       "name": "Remo en T agarre neutro",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Pullover",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Jalón al pecho",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 120,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Remo en maquina agarre neutro unilateral",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": null,
+       "log": []
+      },
+      {
+       "muscle": "Trapecio",
+       "name": "Elevaciones de hombro (trapecio)",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 120,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo polea baja",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo polea alta",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Pierna",
+     "exercises": [
+      {
+       "muscle": "Pierna",
+       "name": "Aductores en maquina",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Sentadilla Hack",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 240,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Extensor de cuadriceps",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Aductores en maquina",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Gemelo en prensa",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Pecho - Hombro - Bíceps",
+     "exercises": [
+      {
+       "muscle": "Pecho",
+       "name": "Press banca",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 240,
+       "log": []
+      },
+      {
+       "muscle": "Pecho",
+       "name": "Contractora",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pecho",
+       "name": "Superior en palanca agarre neutro",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Superior en palanca agarre abierto",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Elevaciones laterales en palanca",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Spider curl barra Z",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Curl martillo de pie unilateral",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 120,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Espalda - Hombro - Biceps",
+     "exercises": [
+      {
+       "muscle": "Espalda",
+       "name": "Peso muerto rumano",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 120,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Pullover con cuerda baja",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Jalon al pecho",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Contractora inversa",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Curl con mancuernas de pie unilateral",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Curl banco Scott barra Z",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Pecho - Hombro - Triceps",
+     "exercises": [
+      {
+       "muscle": "Pecho",
+       "name": "Press inclinado multipower",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pecho",
+       "name": "Superior en palanca agarre neutro",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Elevaciones laterales en polea baja",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 120,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Elevaciones laterales en palanca",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo polea baja",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo polea alta",
+       "sets": 2,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Press frances con barra",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "old-3",
+   "sheet": "3",
+   "title": "Rutina Febrero - Marzo 2026",
+   "days": [
+    {
+     "name": "Espalda - Trapecio - Tríceps",
+     "exercises": [
+      {
+       "muscle": "Espalda",
+       "name": "Remo en máquina agarre neutro unilateral",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Remo en T agarre abierto",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Jalón al pecho",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Trapecio",
+       "name": "Elevaciones de hombro (trapecio)",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo polea baja",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo polea alta",
+       "sets": 2,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "fondos en paralelas",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Pierna",
+     "exercises": [
+      {
+       "muscle": "Pierna",
+       "name": "Aductores en maquina",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Sentadilla Hack",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 240,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Extensor de cuadriceps",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Aductores en maquina",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Gemelo en prensa",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Pecho - Hombro - Bíceps",
+     "exercises": [
+      {
+       "muscle": "Pecho",
+       "name": "Press inclinado con mancuernas",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 240,
+       "log": []
+      },
+      {
+       "muscle": "Pecho",
+       "name": "Superior en palanca agarre neutro",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pecho",
+       "name": "Contractora/Aperturas laterales",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Superior en palanca agarre abierto",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Elevaciones laterales en palanca",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Spider curl barra Z",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Curl martillo de pie unilateral",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 120,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Espalda - Hombro - Biceps",
+     "exercises": [
+      {
+       "muscle": "Espalda",
+       "name": "Remo en T agarre neutro",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 120,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Jalon al pecho",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "face pull en polea",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Contractora inversa",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Curl con mancuernas de pie unilateral",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Curl martillo de pie unilateral",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Curl cristo en polea",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Pecho - Hombro - Triceps",
+     "exercises": [
+      {
+       "muscle": "Pecho",
+       "name": "Press inclinado multipower",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pecho",
+       "name": "Superior en palanca agarre neutro",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Elevaciones laterales en polea baja",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 120,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Elevaciones laterales en palanca",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo polea baja",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo polea alta",
+       "sets": 2,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Press frances con barra",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "old-4",
+   "sheet": "4",
+   "title": "Rutina Junio 2026",
+   "days": [
+    {
+     "name": "Espalda - Trapecio - Bíceps",
+     "exercises": [
+      {
+       "muscle": "Espalda",
+       "name": "Jalón al pecho agarre neutro",
+       "sets": 3,
+       "reps": "",
+       "rir": "1 a 3",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Remo en T",
+       "sets": 3,
+       "reps": "",
+       "rir": "1 a 3",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Pullover con cuerda",
+       "sets": 3,
+       "reps": "",
+       "rir": "0 a 1",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Contractora inversa",
+       "sets": 3,
+       "reps": "",
+       "rir": "0 a 1",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Spider curl barra Z",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Curl martillo de pie unilateral",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 120,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Pecho - Hombro - Tríceps",
+     "exercises": [
+      {
+       "muscle": "Pecho",
+       "name": "Press inclinado con mancuernas",
+       "sets": 3,
+       "reps": "",
+       "rir": "1 a 3",
+       "restSec": 240,
+       "log": []
+      },
+      {
+       "muscle": "Pecho",
+       "name": "Superior en palanca agarre neutro",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pecho",
+       "name": "Contractora/Aperturas laterales",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Superior en palanca agarre abierto",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Elevaciones laterales en palanca",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo polea baja katana",
+       "sets": 3,
+       "reps": "",
+       "rir": "0 a 2",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo polea alta rodillas",
+       "sets": 2,
+       "reps": "",
+       "rir": "0 a 2",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "fondos en paralelas",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Pierna",
+     "exercises": [
+      {
+       "muscle": "Pierna",
+       "name": "Aductores en maquina",
+       "sets": 4,
+       "reps": "",
+       "rir": "0 a 3",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Sentadilla Hack / Pendular",
+       "sets": 4,
+       "reps": "",
+       "rir": "1 a 3",
+       "restSec": 240,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Extensor de cuadriceps",
+       "sets": 3,
+       "reps": "",
+       "rir": "0 a 1",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Curl femoral",
+       "sets": 4,
+       "reps": "",
+       "rir": "0 a 1",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Aductores en maquina",
+       "sets": 3,
+       "reps": "",
+       "rir": "0 a 1",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Pierna",
+       "name": "Gemelo en prensa",
+       "sets": 3,
+       "reps": "",
+       "rir": "0 a 1",
+       "restSec": 45,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Espalda - Hombro - Biceps",
+     "exercises": [
+      {
+       "muscle": "Espalda",
+       "name": "Remo en T",
+       "sets": 4,
+       "reps": "",
+       "rir": "1 a 3",
+       "restSec": 240,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Remo unilateral en polea",
+       "sets": 3,
+       "reps": "",
+       "rir": "1 a 3",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Jalón al pecho agarre neutro",
+       "sets": 3,
+       "reps": "",
+       "rir": "0 a 2",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Espalda",
+       "name": "Extensión lumbar en banco",
+       "sets": 3,
+       "reps": "",
+       "rir": "0 a 1",
+       "restSec": 90,
+       "log": []
+      },
+      {
+       "muscle": "Trapecio",
+       "name": "Elevaciones de hombro",
+       "sets": 3,
+       "reps": "",
+       "rir": "0 a 1",
+       "restSec": 90,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Curl con mancuernas de pie unilateral",
+       "sets": 3,
+       "reps": "",
+       "rir": "0 a 1",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Curl martillo de pie unilateral",
+       "sets": 3,
+       "reps": "",
+       "rir": "0 a 1",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Biceps",
+       "name": "Curl de bíceps Scott",
+       "sets": 3,
+       "reps": "",
+       "rir": "1 a 2",
+       "restSec": 45,
+       "log": []
+      }
+     ]
+    },
+    {
+     "name": "Pecho - Hombro - Triceps",
+     "exercises": [
+      {
+       "muscle": "Pecho",
+       "name": "Press inclinado multipower",
+       "sets": 3,
+       "reps": "",
+       "rir": "1 a 3",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Pecho",
+       "name": "Contractora/Aperturas laterales",
+       "sets": 3,
+       "reps": "",
+       "rir": "0 a 1",
+       "restSec": 180,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Press militar",
+       "sets": 4,
+       "reps": "",
+       "rir": "1 a 3",
+       "restSec": 120,
+       "log": []
+      },
+      {
+       "muscle": "Hombro",
+       "name": "Elevaciones laterales en palanca",
+       "sets": 4,
+       "reps": "",
+       "rir": "",
+       "restSec": 45,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo polea baja",
+       "sets": 3,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Extensor de codo polea alta tumbado",
+       "sets": 2,
+       "reps": "",
+       "rir": "",
+       "restSec": 150,
+       "log": []
+      },
+      {
+       "muscle": "Triceps",
+       "name": "Press frances con mancuerna",
+       "sets": 3,
+       "reps": "",
+       "rir": "1 a 2",
+       "restSec": 45,
+       "log": []
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "warns": [
+  "[revisar] hoja 2 Remo en maquina agarre neutro unilateral: descanso \"nada\""
+ ]
+}

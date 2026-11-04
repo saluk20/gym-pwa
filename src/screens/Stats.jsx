@@ -11,8 +11,8 @@ function Chart({ pts }) {
   const xy = pts.map((p, i) => [pad + (i * (W - 2 * pad)) / (pts.length - 1), H - pad - ((p.score - lo) / span) * (H - 2 * pad)]);
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Evolución del score peso por reps">
-      <polyline points={xy.map((p) => p.join(',')).join(' ')} fill="none" stroke="#F2704F" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-      {xy.map(([x, y], i) => <circle key={i} cx={x} cy={y} r="4" fill={pts[i].src === 'app' ? '#F2704F' : '#fff'} stroke="#F2704F" strokeWidth="2" />)}
+      <polyline points={xy.map((p) => p.join(',')).join(' ')} fill="none" className="stroke-brand" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      {xy.map(([x, y], i) => <circle key={i} cx={x} cy={y} r="4" className={pts[i].src === 'app' ? 'fill-brand' : 'fill-card'} className="stroke-brand" strokeWidth="2" />)}
     </svg>
   );
 }
