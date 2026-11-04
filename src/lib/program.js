@@ -32,7 +32,7 @@ export const stepOf = (ex, settings) => settings.steps?.[ex.id] ?? DEFAULT_STEP;
 export function suggestionFor(ex, day, state) {
   const { sessions, settings } = state;
   const last = lastPerformance(ex, sessions);
-  const wi = cursorOf(day, sessions);
+  const wi = cursorOf(day, state);
   return {
     last,
     ...suggest(ex, last, { step: stepOf(ex, settings), deload: settings.deload, isDeload: isDeloadWeek(wi) }),

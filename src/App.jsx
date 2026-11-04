@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ErrorBoundary from './components/ErrorBoundary.jsx';
 import Nav from './components/Nav.jsx';
 import Home from './screens/Home.jsx';
 import Plan from './screens/Plan.jsx';
@@ -19,9 +20,9 @@ export default function App() {
   const start = () => setWorkoutDay(open ? open.dayId : nextDay(st).id);
   return (
     <div className="mx-auto min-h-full max-w-[430px]">
-      <Screen go={setTab} openWorkout={setWorkoutDay} />
+      <ErrorBoundary key={tab} onReset={() => setTab('home')}><Screen go={setTab} openWorkout={setWorkoutDay} /></ErrorBoundary>
       {!workoutDay && <Nav tab={tab} onTab={setTab} onStart={start} resume={!!open} />}
-      {workoutDay && <Workout dayId={workoutDay} onClose={() => setWorkoutDay(null)} />}
+      {workoutDay && <ErrorBoundary onReset={() => setWorkoutDay(null)}><Workout dayId={workoutDay} onClose={() => setWorkoutDay(null)} /></ErrorBoundary>}
     </div>
   );
 }

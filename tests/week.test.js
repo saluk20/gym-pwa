@@ -18,3 +18,9 @@ test('una sesión terminada en la semana marca el día como hecho', () => {
   const s = st([{ dayId: d.id, finishedAt: 1, weekIndex: 5 }]);
   assert.ok(dayDone(d, s));
 });
+
+test('suggestionFor funciona con el estado completo (regresión pantalla negra)', async () => {
+  const { suggestionFor } = await import('../src/lib/program.js');
+  const s = { sessions: [], settings: { weekIndex: 5, deload: 0.9, steps: {} } };
+  for (const d of days) for (const e of d.exercises) assert.ok(suggestionFor(e, d, s).kind);
+});
