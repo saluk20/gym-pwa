@@ -35,6 +35,8 @@ jobs:
 
       - name: Build PWA
         run: npm run build
+        env:
+          VITE_SYNC_URL: https://gym-sync.lucas-gym-sync.workers.dev
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
