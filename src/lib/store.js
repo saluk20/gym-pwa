@@ -54,14 +54,11 @@ export const activeSession = (st = state) => st.sessions.find((s) => !s.finished
 export const actions = {
   /** Abre (o retoma) la sesión de un día, con las series precargadas con la sugerencia de sobrecarga. */
   startSession(dayId) {
-    const open = activeSession();
-    if (open) {
-      if (open.dayId === dayId) return open.id;
-      // Hay otra sesión sin terminar: se descarta si está vacía, si no se retoma esa.
-      const touched = Object.values(open.sets).some((a) => a.some((x) => x.done));
-      if (touched) return open.id;
-      commit({ ...state, sessions: state.sessions.filter((s) => s.id !== open.id) });
-    }
+    // Retoma la sesión abierta de ESTE día; las abiertas de otros días sin series hechas se descartan, las demás se conservan.
+    const same = state.sessions.find((x) => !x.finishedAt && x.dayId === dayId);
+    if (same) return same.id;
+    const keep = state.sessions.filter((x) => x.finishedAt || Object.values(x.sets).some((a) => a.some((r) => r.done)));
+    if (keep.length !== state.sessions.length) commit({ ...state, sessions: keep });
     const day = dayById(dayId);
     const sets = {};
     const warm = {}; // calentamiento/aproximación: aparte de sets, no cuenta en volumen ni progresión
