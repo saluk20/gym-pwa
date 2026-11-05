@@ -29,6 +29,21 @@ export const lastWeekIndex = LAST_WEEK;
 
 export const stepOf = (ex, settings) => settings.steps?.[ex.id] ?? DEFAULT_STEP;
 
+const norm = (m) => String(m).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+export const WARMUP_MUSCLES = ['espalda', 'pecho', 'trapecio', 'hombro', 'biceps', 'triceps', 'abdomen'];
+/** Calentamiento (2 × 90 s) + aproximación (1 × 180 s) antes del 1.er ejercicio de cada grupo del día. Pesos: % del peso de trabajo, editables. */
+export function warmupRows(day, ex, workW, step) {
+  const m = norm(ex.muscle);
+  if (!WARMUP_MUSCLES.includes(m)) return null;
+  if (day.exercises.find((e) => norm(e.muscle) === m)?.id !== ex.id) return null;
+  const rw = (p) => (workW > 0 ? Math.max(step, Math.round((workW * p) / step) * step) : 0);
+  return [
+    { kind: 'cal', w: rw(0.4), r: 12, restSec: 90, done: false },
+    { kind: 'cal', w: rw(0.6), r: 8, restSec: 90, done: false },
+    { kind: 'apr', w: rw(0.8), r: 4, restSec: 180, done: false },
+  ];
+}
+
 export function suggestionFor(ex, day, state) {
   const { sessions, settings } = state;
   const last = lastPerformance(ex, sessions);

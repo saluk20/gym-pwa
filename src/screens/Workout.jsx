@@ -62,6 +62,21 @@ function ExerciseCard({ ex, day, session, state, onSetDone }) {
         )}
       </p>
 
+      {session.warm?.[ex.id] && (
+        <ol className="mt-3 space-y-2" aria-label="Calentamiento y aproximación">
+          {session.warm[ex.id].map((r, i) => (
+            <li key={i} className={`flex items-center justify-between gap-1 rounded-[20px] border border-dashed border-brand/40 p-2 ${r.done ? 'bg-brand/10' : ''}`}>
+              <span className="w-12 text-center text-[11px] font-semibold leading-tight text-brand">{r.kind === 'cal' ? 'Calent.' : 'Aprox.'}<br /><span className="text-muted">{fmtClock(r.restSec)}</span></span>
+              <Stepper label="Peso" wide value={r.w} step={step} onChange={(w) => actions.updateWarm(session.id, ex.id, i, { w })} />
+              <Stepper label="Repeticiones" value={r.r} step={1} onChange={(v) => actions.updateWarm(session.id, ex.id, i, { r: v })} />
+              <button onClick={() => { unlockAudio(); actions.toggleWarm(session.id, ex.id, i, ex.name); }} aria-pressed={r.done} aria-label={r.done ? 'Desmarcar' : 'Completar calentamiento'}
+                className={`tap grid h-12 w-12 shrink-0 place-items-center rounded-full ${r.done ? 'bg-brand text-onbrand' : 'border-2 border-brand/40 text-brand'}`}>
+                <CheckIcon size={22} />
+              </button>
+            </li>
+          ))}
+        </ol>
+      )}
       <ol className="mt-3 space-y-2">
         {rows.map((r, i) => (
           <li key={i} className={`flex items-center justify-between gap-1 rounded-[20px] p-2 transition-colors ${r.done ? 'bg-brand/10' : 'bg-card2'}`}>

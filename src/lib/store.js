@@ -1,6 +1,8 @@
 import { useSyncExternalStore } from 'react';
-import { dayById, suggestionFor, weeks, cursorOf, weekComplete, lastWeekIndex, DEFAULT_WEEK } from './program.js';
+import { dayById, suggestionFor, stepOf, weeks, cursorOf, weekComplete, lastWeekIndex, DEFAULT_WEEK } from './program.js';
 import { weekKey } from './plan.js';
+import { armAlarm, disarmAlarm } from './feedback.js';
+import { warmupRows } from './program.js';
 
 const KEY = 'gym-pwa:v1';
 const DEFAULTS = {
@@ -62,16 +64,19 @@ export const actions = {
     }
     const day = dayById(dayId);
     const sets = {};
+    const warm = {}; // calentamiento/aproximación: aparte de sets, no cuenta en volumen ni progresión
     const soft = state.modes[weekKey(Date.now())]?.mode === 'suave';
     for (const ex of day.exercises) {
       const sug = suggestionFor(ex, day, state);
       const n = soft ? Math.max(1, ex.sets - 1) : ex.sets; // modo Suave: −1 serie, mismo peso
       sets[ex.id] = Array.from({ length: n }, () => ({ w: sug.weight, r: sug.reps, done: false }));
+      const wr = warmupRows(day, ex, sug.weight, stepOf(ex, state.settings));
+      if (wr) warm[ex.id] = wr;
     }
     const id = `s${Date.now()}`;
     commit({
       ...state,
-      sessions: [...state.sessions, { id, dayId, weekIndex: cursorOf(day, state), startedAt: Date.now(), finishedAt: null, sets }],
+      sessions: [...state.sessions, { id, dayId, weekIndex: cursorOf(day, state), startedAt: Date.now(), finishedAt: null, sets, warm }],
     });
     return id;
   },
@@ -89,6 +94,17 @@ export const actions = {
     if (now && restSec) actions.startRest(restSec, label);
     if (!now) actions.stopRest();
     return now;
+  },
+  updateWarm(sid, exId, i, patch) {
+    patchSession(sid, (s) => ({ ...s, warm: { ...s.warm, [exId]: s.warm[exId].map((x, k) => (k === i ? { ...x, ...patch } : x)) } }));
+  },
+  toggleWarm(sid, exId, i, label) {
+    const s = state.sessions.find((x) => x.id === sid);
+    const row = s.warm[exId][i];
+    const now = !row.done;
+    actions.updateWarm(sid, exId, i, { done: now });
+    if (now) actions.startRest(row.restSec, label);
+    else actions.stopRest();
   },
   addSet(sid, exId) {
     patchSession(sid, (s) => {
@@ -109,7 +125,7 @@ export const actions = {
     commit({
       ...state,
       rest: null,
-      sessions: state.sessions.map((x) => (x.id === sid ? { ...x, sets, finishedAt: Date.now(), updatedAt: Date.now() } : x)),
+      sessions: state.sessions.map((x) => (x.id === sid ? { ...x, sets, warm: Object.fromEntries(Object.entries(x.warm ?? {}).map(([k, a]) => [k, a.filter((r) => r.done)]).filter(([, a]) => a.length)), finishedAt: Date.now(), updatedAt: Date.now() } : x)),
     });
     // Semana completa (todos los días hechos) → avanza a la siguiente.
     if (weekComplete(state) && state.settings.weekIndex < lastWeekIndex) actions.setSetting({ weekIndex: state.settings.weekIndex + 1 });
@@ -118,14 +134,18 @@ export const actions = {
     commit({ ...state, rest: null, sessions: state.sessions.filter((x) => x.id !== sid) });
   },
   startRest(sec, label = '') {
-    commit({ ...state, rest: { endsAt: Date.now() + sec * 1000, total: sec, label } });
+    const endsAt = Date.now() + sec * 1000;
+    armAlarm(endsAt);
+    commit({ ...state, rest: { endsAt, total: sec, label } });
   },
   adjustRest(deltaSec) {
     if (!state.rest) return;
     const endsAt = Math.max(Date.now() + 1000, state.rest.endsAt + deltaSec * 1000);
+    armAlarm(endsAt);
     commit({ ...state, rest: { ...state.rest, endsAt, total: Math.max(1, state.rest.total + deltaSec) } });
   },
   stopRest() {
+    disarmAlarm();
     if (state.rest) commit({ ...state, rest: null });
   },
   setSetting(patch) {
