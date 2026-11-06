@@ -29,7 +29,7 @@ export function beep(times = 3) {
 // Alarma en segundo plano (mejor esfuerzo): un WAV = silencio hasta el fin del descanso + pitidos.
 // Se reproduce en un <audio> desde el gesto del usuario; el sistema lo mantiene vivo con la app en segundo plano.
 const SR = 8000;
-function alarmWav(silenceSec, ringSec = 90) {
+function alarmWav(silenceSec, ringSec = 30) {
   const n = Math.round((silenceSec + ringSec) * SR);
   const buf = new ArrayBuffer(44 + n);
   const v = new DataView(buf);
@@ -57,10 +57,22 @@ export function armAlarm(endsAt) {
     auUrl = URL.createObjectURL(alarmWav(secs));
     au = new Audio(auUrl);
     au.playsInline = true;
-    au.play().catch(() => { au = null; });
+    au.play().then(() => syncMedia(secs)).catch(() => { au = null; });
+  } catch {}
+}
+// Isla dinámica / pantalla de bloqueo muestran la duración del audio (descanso + pitidos).
+// Se fuerza la duración mostrada al descanso real.
+function syncMedia(secs) {
+  try {
+    const ms = navigator.mediaSession;
+    if (!ms) return;
+    ms.metadata = new MediaMetadata({ title: 'Descanso', artist: 'Gym' });
+    ms.playbackState = 'playing';
+    ms.setPositionState?.({ duration: Math.max(1, secs), playbackRate: 1, position: 0 });
   } catch {}
 }
 export function disarmAlarm() {
+  try { navigator.mediaSession && (navigator.mediaSession.playbackState = 'none'); } catch {}
   try { au?.pause(); } catch {}
   if (auUrl) URL.revokeObjectURL(auUrl);
   au = auUrl = null;
