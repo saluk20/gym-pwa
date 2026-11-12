@@ -1,0 +1,664 @@
+{
+ "generatedFrom": "make-next-routine.mjs",
+ "title": "Rutina Febrero 2027",
+ "short": "Feb 2027",
+ "weeks": [
+  "Semana 1",
+  "Semana 2",
+  "Semana 3",
+  "Semana 4",
+  "Descarga 1",
+  "Semana 5",
+  "Semana 6",
+  "Semana 7",
+  "Semana 8"
+ ],
+ "days": [
+  {
+   "id": "n1",
+   "n": 1,
+   "name": "Espalda - Trapecio - Bíceps",
+   "exercises": [
+    {
+     "id": "n1e1",
+     "muscle": "Espalda",
+     "name": "Jalón al pecho agarre neutro",
+     "sets": 3,
+     "repText": "8 a 12",
+     "repMin": 8,
+     "repMax": 12,
+     "failure": false,
+     "rir": "1 a 3",
+     "restSec": 180,
+     "history": [],
+     "seed": {
+      "weight": 68,
+      "reps": 10,
+      "from": "Semana 4"
+     }
+    },
+    {
+     "id": "n1e2",
+     "muscle": "Espalda",
+     "name": "Remo en T",
+     "sets": 3,
+     "repText": "8 a 12",
+     "repMin": 8,
+     "repMax": 12,
+     "failure": false,
+     "rir": "1 a 3",
+     "restSec": 180,
+     "history": [],
+     "seed": {
+      "weight": 40,
+      "reps": 10,
+      "from": "Semana 4"
+     }
+    },
+    {
+     "id": "n1e3",
+     "muscle": "Espalda",
+     "name": "Pullover con cuerda",
+     "sets": 3,
+     "repText": "16 a 18",
+     "repMin": 16,
+     "repMax": 18,
+     "failure": false,
+     "rir": "0 a 1",
+     "restSec": 45,
+     "history": [],
+     "seed": {
+      "weight": 30,
+      "reps": 15,
+      "from": "Semana 4"
+     }
+    },
+    {
+     "id": "n1e4",
+     "muscle": "Trapecio",
+     "name": "Elevaciones de hombro",
+     "sets": 3,
+     "repText": "10 a 12",
+     "repMin": 10,
+     "repMax": 12,
+     "failure": false,
+     "rir": "0 a 1",
+     "restSec": 120,
+     "history": [],
+     "seed": {
+      "weight": 55,
+      "reps": 16,
+      "from": "Semana 4"
+     }
+    },
+    {
+     "id": "n1e5",
+     "muscle": "Hombro",
+     "name": "Contractora inversa",
+     "sets": 3,
+     "repText": "16 a 18",
+     "repMin": 16,
+     "repMax": 18,
+     "failure": false,
+     "rir": "0 a 1",
+     "restSec": 45,
+     "history": [],
+     "seed": {
+      "weight": 32,
+      "reps": 14,
+      "from": "Semana 2"
+     }
+    },
+    {
+     "id": "n1e6",
+     "muscle": "Biceps",
+     "name": "Spider curl barra Z",
+     "sets": 3,
+     "repText": "6 a 8",
+     "repMin": 6,
+     "repMax": 8,
+     "failure": false,
+     "rir": "",
+     "restSec": 150,
+     "history": [],
+     "seed": {
+      "weight": 10,
+      "reps": 10,
+      "from": "Semana 4"
+     }
+    },
+    {
+     "id": "n1e7",
+     "muscle": "Biceps",
+     "name": "Curl martillo de pie unilateral",
+     "sets": 3,
+     "repText": "8 a 10",
+     "repMin": 8,
+     "repMax": 10,
+     "failure": false,
+     "rir": "",
+     "restSec": 120,
+     "history": [],
+     "seed": {
+      "weight": 17.5,
+      "reps": 12,
+      "from": "Semana 4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "n2",
+   "n": 2,
+   "name": "Pierna",
+   "exercises": [
+    {
+     "id": "n2e1",
+     "muscle": "Pierna",
+     "name": "Sentadilla Hack / Pendular",
+     "sets": 4,
+     "repText": "8 a 10",
+     "repMin": 8,
+     "repMax": 10,
+     "failure": false,
+     "rir": "1 a 3",
+     "restSec": 240,
+     "history": []
+    },
+    {
+     "id": "n2e2",
+     "muscle": "Pierna",
+     "name": "Peso muerto rumano",
+     "sets": 3,
+     "repText": "8 a 10",
+     "repMin": 8,
+     "repMax": 10,
+     "failure": false,
+     "rir": "1 a 3",
+     "restSec": 180,
+     "history": []
+    },
+    {
+     "id": "n2e3",
+     "muscle": "Pierna",
+     "name": "Extensor de cuadriceps",
+     "sets": 3,
+     "repText": "10 a 12",
+     "repMin": 10,
+     "repMax": 12,
+     "failure": false,
+     "rir": "0 a 1",
+     "restSec": 120,
+     "history": []
+    },
+    {
+     "id": "n2e4",
+     "muscle": "Pierna",
+     "name": "Curl femoral",
+     "sets": 3,
+     "repText": "10 a 15",
+     "repMin": 10,
+     "repMax": 15,
+     "failure": false,
+     "rir": "0 a 1",
+     "restSec": 150,
+     "history": []
+    },
+    {
+     "id": "n2e5",
+     "muscle": "Pierna",
+     "name": "Aductores en maquina",
+     "sets": 3,
+     "repText": "10 a 12",
+     "repMin": 10,
+     "repMax": 12,
+     "failure": false,
+     "rir": "0 a 2",
+     "restSec": 90,
+     "history": []
+    },
+    {
+     "id": "n2e6",
+     "muscle": "Pierna",
+     "name": "Gemelo en prensa",
+     "sets": 4,
+     "repText": "12 a 16",
+     "repMin": 12,
+     "repMax": 16,
+     "failure": false,
+     "rir": "0 a 1",
+     "restSec": 60,
+     "history": []
+    }
+   ]
+  },
+  {
+   "id": "n3",
+   "n": 3,
+   "name": "Pecho - Hombro - Tríceps",
+   "exercises": [
+    {
+     "id": "n3e1",
+     "muscle": "Pecho",
+     "name": "Press inclinado multipower",
+     "sets": 3,
+     "repText": "6 a 8",
+     "repMin": 6,
+     "repMax": 8,
+     "failure": false,
+     "rir": "1 a 3",
+     "restSec": 240,
+     "history": [],
+     "seed": {
+      "weight": 20,
+      "reps": 7,
+      "from": "Semana 1"
+     }
+    },
+    {
+     "id": "n3e2",
+     "muscle": "Pecho",
+     "name": "Superior en palanca agarre neutro",
+     "sets": 3,
+     "repText": "8 a 10",
+     "repMin": 8,
+     "repMax": 10,
+     "failure": false,
+     "rir": "",
+     "restSec": 180,
+     "history": [],
+     "seed": {
+      "weight": 35,
+      "reps": 7,
+      "from": "Semana 5"
+     }
+    },
+    {
+     "id": "n3e3",
+     "muscle": "Pecho",
+     "name": "Contractora/Aperturas laterales",
+     "sets": 3,
+     "repText": "16 a 18",
+     "repMin": 16,
+     "repMax": 18,
+     "failure": false,
+     "rir": "",
+     "restSec": 45,
+     "history": [],
+     "seed": {
+      "weight": 66,
+      "reps": 16,
+      "from": "Semana 5"
+     }
+    },
+    {
+     "id": "n3e4",
+     "muscle": "Hombro",
+     "name": "Superior en palanca agarre abierto",
+     "sets": 3,
+     "repText": "16 a 18",
+     "repMin": 16,
+     "repMax": 18,
+     "failure": false,
+     "rir": "",
+     "restSec": 45,
+     "history": [],
+     "seed": {
+      "weight": 17.5,
+      "reps": 16,
+      "from": "Semana 5"
+     }
+    },
+    {
+     "id": "n3e5",
+     "muscle": "Hombro",
+     "name": "Elevaciones laterales en palanca",
+     "sets": 4,
+     "repText": "10 a 12",
+     "repMin": 10,
+     "repMax": 12,
+     "failure": false,
+     "rir": "",
+     "restSec": 150,
+     "history": [],
+     "seed": {
+      "weight": 27.5,
+      "reps": 13,
+      "from": "Semana 5"
+     }
+    },
+    {
+     "id": "n3e6",
+     "muscle": "Triceps",
+     "name": "Extensor de codo polea baja katana",
+     "sets": 3,
+     "repText": "8 a 10",
+     "repMin": 8,
+     "repMax": 10,
+     "failure": false,
+     "rir": "0 a 2",
+     "restSec": 150,
+     "history": [],
+     "seed": {
+      "weight": 36,
+      "reps": 10,
+      "from": "Semana 5"
+     }
+    },
+    {
+     "id": "n3e7",
+     "muscle": "Triceps",
+     "name": "Extensor de codo polea alta rodillas",
+     "sets": 2,
+     "repText": "10 a 12",
+     "repMin": 10,
+     "repMax": 12,
+     "failure": false,
+     "rir": "0 a 2",
+     "restSec": 150,
+     "history": [],
+     "seed": {
+      "weight": 45,
+      "reps": 11,
+      "from": "Semana 5"
+     }
+    },
+    {
+     "id": "n3e8",
+     "muscle": "Triceps",
+     "name": "Fondos en paralelas",
+     "sets": 3,
+     "repText": "fallo",
+     "repMin": 0,
+     "repMax": null,
+     "failure": true,
+     "rir": "",
+     "restSec": 45,
+     "history": []
+    }
+   ]
+  },
+  {
+   "id": "n4",
+   "n": 4,
+   "name": "Espalda - Hombro - Bíceps",
+   "exercises": [
+    {
+     "id": "n4e1",
+     "muscle": "Espalda",
+     "name": "Remo en T",
+     "sets": 4,
+     "repText": "6 a 8",
+     "repMin": 6,
+     "repMax": 8,
+     "failure": false,
+     "rir": "1 a 3",
+     "restSec": 240,
+     "history": [],
+     "seed": {
+      "weight": 40,
+      "reps": 10,
+      "from": "Semana 4"
+     }
+    },
+    {
+     "id": "n4e2",
+     "muscle": "Espalda",
+     "name": "Remo unilateral en polea",
+     "sets": 3,
+     "repText": "8 a 10",
+     "repMin": 8,
+     "repMax": 10,
+     "failure": false,
+     "rir": "1 a 3",
+     "restSec": 180,
+     "history": [],
+     "seed": {
+      "weight": 66,
+      "reps": 8,
+      "from": "Semana 4"
+     }
+    },
+    {
+     "id": "n4e3",
+     "muscle": "Espalda",
+     "name": "Jalón al pecho agarre neutro",
+     "sets": 3,
+     "repText": "16 a 18",
+     "repMin": 16,
+     "repMax": 18,
+     "failure": false,
+     "rir": "0 a 2",
+     "restSec": 45,
+     "history": [],
+     "seed": {
+      "weight": 68,
+      "reps": 10,
+      "from": "Semana 4"
+     }
+    },
+    {
+     "id": "n4e4",
+     "muscle": "Espalda",
+     "name": "Extensión lumbar en banco",
+     "sets": 3,
+     "repText": "10 a 15",
+     "repMin": 10,
+     "repMax": 15,
+     "failure": false,
+     "rir": "0 a 1",
+     "restSec": 90,
+     "history": [],
+     "seed": {
+      "weight": 17.5,
+      "reps": 10,
+      "from": "Semana 4"
+     }
+    },
+    {
+     "id": "n4e5",
+     "muscle": "Trapecio",
+     "name": "Elevaciones de hombro",
+     "sets": 3,
+     "repText": "16 a 18",
+     "repMin": 16,
+     "repMax": 18,
+     "failure": false,
+     "rir": "0 a 1",
+     "restSec": 90,
+     "history": [],
+     "seed": {
+      "weight": 55,
+      "reps": 16,
+      "from": "Semana 4"
+     }
+    },
+    {
+     "id": "n4e6",
+     "muscle": "Biceps",
+     "name": "Curl con mancuernas de pie unilateral",
+     "sets": 3,
+     "repText": "6 a 8",
+     "repMin": 6,
+     "repMax": 8,
+     "failure": false,
+     "rir": "0 a 1",
+     "restSec": 150,
+     "history": [],
+     "seed": {
+      "weight": 17.5,
+      "reps": 6,
+      "from": "Semana 4"
+     }
+    },
+    {
+     "id": "n4e7",
+     "muscle": "Biceps",
+     "name": "Curl martillo de pie unilateral",
+     "sets": 3,
+     "repText": "16 a 18",
+     "repMin": 16,
+     "repMax": 18,
+     "failure": false,
+     "rir": "0 a 1",
+     "restSec": 150,
+     "history": [],
+     "seed": {
+      "weight": 17.5,
+      "reps": 12,
+      "from": "Semana 4"
+     }
+    },
+    {
+     "id": "n4e8",
+     "muscle": "Biceps",
+     "name": "Curl de bíceps Scott",
+     "sets": 3,
+     "repText": "16 a 18",
+     "repMin": 16,
+     "repMax": 18,
+     "failure": false,
+     "rir": "1 a 2",
+     "restSec": 45,
+     "history": [],
+     "seed": {
+      "weight": 32,
+      "reps": 10,
+      "from": "Semana 4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5",
+   "n": 5,
+   "name": "Pecho - Hombro - Tríceps",
+   "exercises": [
+    {
+     "id": "n5e1",
+     "muscle": "Pecho",
+     "name": "Press inclinado con mancuernas",
+     "sets": 3,
+     "repText": "6 a 8",
+     "repMin": 6,
+     "repMax": 8,
+     "failure": false,
+     "rir": "1 a 3",
+     "restSec": 180,
+     "history": [],
+     "seed": {
+      "weight": 22.5,
+      "reps": 8,
+      "from": "Semana 5"
+     }
+    },
+    {
+     "id": "n5e2",
+     "muscle": "Pecho",
+     "name": "Contractora/Aperturas laterales",
+     "sets": 3,
+     "repText": "10 a 12",
+     "repMin": 10,
+     "repMax": 12,
+     "failure": false,
+     "rir": "0 a 1",
+     "restSec": 180,
+     "history": [],
+     "seed": {
+      "weight": 66,
+      "reps": 16,
+      "from": "Semana 5"
+     }
+    },
+    {
+     "id": "n5e3",
+     "muscle": "Hombro",
+     "name": "Press militar",
+     "sets": 4,
+     "repText": "8 a 10",
+     "repMin": 8,
+     "repMax": 10,
+     "failure": false,
+     "rir": "1 a 3",
+     "restSec": 120,
+     "history": [],
+     "seed": {
+      "weight": 20,
+      "reps": 8,
+      "from": "Semana 1"
+     }
+    },
+    {
+     "id": "n5e4",
+     "muscle": "Hombro",
+     "name": "Elevaciones laterales en palanca",
+     "sets": 4,
+     "repText": "16 a 18",
+     "repMin": 16,
+     "repMax": 18,
+     "failure": false,
+     "rir": "",
+     "restSec": 45,
+     "history": [],
+     "seed": {
+      "weight": 27.5,
+      "reps": 13,
+      "from": "Semana 5"
+     }
+    },
+    {
+     "id": "n5e5",
+     "muscle": "Triceps",
+     "name": "Extensor de codo polea baja",
+     "sets": 3,
+     "repText": "8 a 10",
+     "repMin": 8,
+     "repMax": 10,
+     "failure": false,
+     "rir": "",
+     "restSec": 150,
+     "history": []
+    },
+    {
+     "id": "n5e6",
+     "muscle": "Triceps",
+     "name": "Extensor de codo polea alta tumbado",
+     "sets": 2,
+     "repText": "8 a 10",
+     "repMin": 8,
+     "repMax": 10,
+     "failure": false,
+     "rir": "",
+     "restSec": 150,
+     "history": []
+    },
+    {
+     "id": "n5e7",
+     "muscle": "Triceps",
+     "name": "Press frances con mancuerna",
+     "sets": 3,
+     "repText": "16 a 18",
+     "repMin": 16,
+     "repMax": 18,
+     "failure": false,
+     "rir": "1 a 2",
+     "restSec": 45,
+     "history": [],
+     "seed": {
+      "weight": 17.5,
+      "reps": 8,
+      "from": "Semana 1"
+     }
+    }
+   ]
+  }
+ ],
+ "changes": [
+  "Pierna pasa al Día 2: la app propone el siguiente día pendiente en orden, así la pierna ya no se queda la última. El compuesto va primero (Hack), se añade peso muerto rumano para femoral y glúteo, y aductores baja de 7 a 3 series.",
+  "Dura 9 semanas (4 + descarga + 4), no 17–20: tus bloques reales duran 4–8 semanas.",
+  "Trapecio: 2 días (pesado en Día 1, ligero en Día 4) en vez de 1.",
+  "Press inclinado: multipower en el Día 3 y mancuernas en el Día 5 (la de mancuernas bajó un 12 % en la actual).",
+  "Día 1 pasa a llamarse «Bíceps»: en la actual se llama Tríceps pero solo entrena bíceps.",
+  "Se mantienen los ejercicios que progresan (contractora, remo unilateral, laterales, curl Scott, extensión lumbar)."
+ ]
+}

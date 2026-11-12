@@ -1,0 +1,2021 @@
+{
+ "generatedFrom": "rutinas-antiguas.xlsx",
+ "logs": [
+  {
+   "routine": "old-2",
+   "day": 1,
+   "name": "Remo en T agarre neutro",
+   "session": 1,
+   "sets": null,
+   "weight": 70,
+   "reps": null
+  },
+  {
+   "routine": "old-2",
+   "day": 1,
+   "name": "Pullover",
+   "session": 1,
+   "sets": null,
+   "weight": 44,
+   "reps": null
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Remo en máquina agarre neutro unilateral",
+   "session": 1,
+   "sets": 4,
+   "weight": 79,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Remo en máquina agarre neutro unilateral",
+   "session": 2,
+   "sets": 4,
+   "weight": 79,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Remo en máquina agarre neutro unilateral",
+   "session": 4,
+   "sets": 4,
+   "weight": 79,
+   "reps": 6
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Remo en máquina agarre neutro unilateral",
+   "session": 6,
+   "sets": 4,
+   "weight": 79,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Remo en T agarre abierto",
+   "session": 1,
+   "sets": 3,
+   "weight": 60,
+   "reps": 11
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Remo en T agarre abierto",
+   "session": 2,
+   "sets": 3,
+   "weight": 65,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Remo en T agarre abierto",
+   "session": 4,
+   "sets": 3,
+   "weight": 65,
+   "reps": 11
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Remo en T agarre abierto",
+   "session": 6,
+   "sets": 3,
+   "weight": 65,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Jalón al pecho",
+   "session": 1,
+   "sets": 3,
+   "weight": 50,
+   "reps": 16
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Jalón al pecho",
+   "session": 2,
+   "sets": 3,
+   "weight": 54,
+   "reps": 17
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Jalón al pecho",
+   "session": 4,
+   "sets": 3,
+   "weight": 59,
+   "reps": 16
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Jalón al pecho",
+   "session": 6,
+   "sets": 3,
+   "weight": 59,
+   "reps": 18
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Elevaciones de hombro (trapecio)",
+   "session": 2,
+   "sets": 3,
+   "weight": 85,
+   "reps": 14
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Elevaciones de hombro (trapecio)",
+   "session": 4,
+   "sets": 3,
+   "weight": 80,
+   "reps": 16
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Contractora Inversa",
+   "session": 6,
+   "sets": 3,
+   "weight": 52,
+   "reps": 16
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Extensor de codo polea baja",
+   "session": 1,
+   "sets": 3,
+   "weight": 54,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Extensor de codo polea baja",
+   "session": 2,
+   "sets": 3,
+   "weight": 59,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Extensor de codo polea baja",
+   "session": 4,
+   "sets": 3,
+   "weight": 54,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Extensor de codo polea baja",
+   "session": 6,
+   "sets": 3,
+   "weight": 54,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Extensor de codo polea alta",
+   "session": 1,
+   "sets": 2,
+   "weight": 54,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Extensor de codo polea alta",
+   "session": 2,
+   "sets": 2,
+   "weight": 54,
+   "reps": 12
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Extensor de codo polea alta",
+   "session": 4,
+   "sets": 2,
+   "weight": 49.8,
+   "reps": 12
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "Extensor de codo polea alta",
+   "session": 6,
+   "sets": 3,
+   "weight": 54,
+   "reps": 12
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "fondos en paralelas",
+   "session": 1,
+   "sets": 3,
+   "weight": 0,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 1,
+   "name": "fondos en paralelas",
+   "session": 6,
+   "sets": 2,
+   "weight": 0,
+   "reps": 19
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Aductores en maquina",
+   "session": 1,
+   "sets": 3,
+   "weight": 73,
+   "reps": 6
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Aductores en maquina",
+   "session": 2,
+   "sets": 3,
+   "weight": 73,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Aductores en maquina",
+   "session": 3,
+   "sets": 4,
+   "weight": 79,
+   "reps": 6
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Aductores en maquina",
+   "session": 4,
+   "sets": 4,
+   "weight": 79,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Aductores en maquina",
+   "session": 5,
+   "sets": 4,
+   "weight": 86,
+   "reps": 5
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Aductores en maquina",
+   "session": 6,
+   "sets": 4,
+   "weight": 86,
+   "reps": 6
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Sentadilla pendular",
+   "session": 2,
+   "sets": 3,
+   "weight": 30,
+   "reps": 12
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Hacka",
+   "session": 3,
+   "sets": 3,
+   "weight": 25,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Hacka",
+   "session": 4,
+   "sets": 3,
+   "weight": 25,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Sentadilla pendular",
+   "session": 5,
+   "sets": 3,
+   "weight": 35,
+   "reps": 12
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Hacka",
+   "session": 6,
+   "sets": 3,
+   "weight": 30,
+   "reps": 9
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Extensor de cuadriceps",
+   "session": 1,
+   "sets": 4,
+   "weight": 107,
+   "reps": 7
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Extensor de cuadriceps",
+   "session": 2,
+   "sets": 3,
+   "weight": 107,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Extensor de cuadriceps",
+   "session": 3,
+   "sets": 3,
+   "weight": 107,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Extensor de cuadriceps",
+   "session": 4,
+   "sets": 3,
+   "weight": 113,
+   "reps": 9
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Extensor de cuadriceps",
+   "session": 5,
+   "sets": 3,
+   "weight": 113,
+   "reps": 9
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Extensor de cuadriceps",
+   "session": 6,
+   "sets": 3,
+   "weight": 113,
+   "reps": 9
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Aductores en maquina",
+   "session": 1,
+   "sets": 3,
+   "weight": 39,
+   "reps": 20
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Aductores en maquina",
+   "session": 2,
+   "sets": 3,
+   "weight": 39,
+   "reps": 20
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Aductores en maquina",
+   "session": 3,
+   "sets": 3,
+   "weight": 45,
+   "reps": 20
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Aductores en maquina",
+   "session": 4,
+   "sets": 3,
+   "weight": 45,
+   "reps": 20
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Aductores en maquina",
+   "session": 5,
+   "sets": 3,
+   "weight": 52,
+   "reps": 18
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Aductores en maquina",
+   "session": 6,
+   "sets": 3,
+   "weight": 52,
+   "reps": 19
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Gemelo en prensa",
+   "session": 1,
+   "sets": 4,
+   "weight": 107,
+   "reps": 18
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Gemelo en prensa",
+   "session": 2,
+   "sets": 3,
+   "weight": 120,
+   "reps": 18
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Gemelo en prensa",
+   "session": 3,
+   "sets": 3,
+   "weight": 120,
+   "reps": 22
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Gemelo en prensa",
+   "session": 4,
+   "sets": 2,
+   "weight": 107,
+   "reps": 20
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Gemelo en prensa",
+   "session": 6,
+   "sets": 3,
+   "weight": 113,
+   "reps": 18
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Extensor de cuadriceps",
+   "session": 1,
+   "sets": 3,
+   "weight": 52,
+   "reps": 21
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Extensor de cuadriceps",
+   "session": 3,
+   "sets": 3,
+   "weight": 59,
+   "reps": 17
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Femoral tumbado en máquina",
+   "session": 1,
+   "sets": 3,
+   "weight": 36,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Femoral tumbado en máquina",
+   "session": 3,
+   "sets": 3,
+   "weight": 32,
+   "reps": 14
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Femoral sentado en máquina",
+   "session": 4,
+   "sets": 2,
+   "weight": 36,
+   "reps": 14
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Femoral tumbado en máquina",
+   "session": 5,
+   "sets": 3,
+   "weight": 36,
+   "reps": 12
+  },
+  {
+   "routine": "old-3",
+   "day": 2,
+   "name": "Femoral tumbado en máquina",
+   "session": 6,
+   "sets": 3,
+   "weight": 36,
+   "reps": 12
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Pres banca inclinado multipower",
+   "session": 1,
+   "sets": 3,
+   "weight": 30,
+   "reps": 5
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Pres banca inclinado multipower",
+   "session": 2,
+   "sets": 3,
+   "weight": 30,
+   "reps": 6
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Pres banca inclinado multipower",
+   "session": 3,
+   "sets": 3,
+   "weight": 30,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Press inclinado con mancuernas",
+   "session": 4,
+   "sets": 3,
+   "weight": 32.5,
+   "reps": 6
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Press banca inclinado multipower",
+   "session": 6,
+   "sets": 3,
+   "weight": 30,
+   "reps": 7
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Superior en palanca agarre neutro",
+   "session": 1,
+   "sets": 3,
+   "weight": 35,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "banca plano en palanca",
+   "session": 2,
+   "sets": 3,
+   "weight": 45,
+   "reps": 9
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "banca plano en palanca",
+   "session": 3,
+   "sets": 3,
+   "weight": 50,
+   "reps": 6
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Superior en palanca agarre neutro",
+   "session": 4,
+   "sets": 3,
+   "weight": 35,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "banca plano en palanca",
+   "session": 6,
+   "sets": 3,
+   "weight": 50,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "contractors pecho",
+   "session": 1,
+   "sets": 3,
+   "weight": 79,
+   "reps": 15
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "aperturas en polea",
+   "session": 2,
+   "sets": 3,
+   "weight": 9.1,
+   "reps": 19
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "aperturas en polea",
+   "session": 3,
+   "sets": 3,
+   "weight": 9.1,
+   "reps": 20
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "aperturas en polea",
+   "session": 4,
+   "sets": 3,
+   "weight": 11.2,
+   "reps": 16
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "contractors pecho",
+   "session": 6,
+   "sets": 3,
+   "weight": 79,
+   "reps": null
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Hombro en palanca",
+   "session": 1,
+   "sets": 3,
+   "weight": 35,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Elevaciones laterales en palanca",
+   "session": 2,
+   "sets": 3,
+   "weight": 6.8,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Elevaciones laterales en palanca",
+   "session": 3,
+   "sets": 3,
+   "weight": 6.8,
+   "reps": 12
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Elevaciones laterales en palanca",
+   "session": 6,
+   "sets": 3,
+   "weight": 9.1,
+   "reps": 6
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Hombro en palanca",
+   "session": 1,
+   "sets": 3,
+   "weight": 35,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Hombro en palanca",
+   "session": 2,
+   "sets": 3,
+   "weight": 35,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Hombro en palanca",
+   "session": 3,
+   "sets": 3,
+   "weight": 35,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Hombro en palanca",
+   "session": 4,
+   "sets": 3,
+   "weight": 40,
+   "reps": 11
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Hombro en palanca",
+   "session": 6,
+   "sets": 3,
+   "weight": 40,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Spider curl barra Z",
+   "session": 1,
+   "sets": 3,
+   "weight": 15,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Spider curl barra Z",
+   "session": 2,
+   "sets": 3,
+   "weight": 15,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Spider curl barra Z",
+   "session": 3,
+   "sets": 3,
+   "weight": 17.5,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Spider curl barra Z",
+   "session": 4,
+   "sets": 3,
+   "weight": 10,
+   "reps": 15
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Spider curl barra Z",
+   "session": 6,
+   "sets": 3,
+   "weight": 17.5,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Curl martillo de pie unilateral",
+   "session": 1,
+   "sets": 3,
+   "weight": 25,
+   "reps": 18
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Curl martillo de pie unilateral",
+   "session": 2,
+   "sets": 3,
+   "weight": 27.5,
+   "reps": 12
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Curl martillo de pie unilateral",
+   "session": 3,
+   "sets": 3,
+   "weight": 27.5,
+   "reps": 14
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "martillo unilateral sentado",
+   "session": 4,
+   "sets": 2,
+   "weight": 15,
+   "reps": 22
+  },
+  {
+   "routine": "old-3",
+   "day": 3,
+   "name": "Curl martillo de pie unilateral",
+   "session": 6,
+   "sets": 3,
+   "weight": 27.5,
+   "reps": 12
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Remo en T agarre neutro",
+   "session": 1,
+   "sets": 4,
+   "weight": 70,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Remo en T agarre neutro",
+   "session": 2,
+   "sets": 4,
+   "weight": 70,
+   "reps": 6
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Remo en T agarre neutro",
+   "session": 3,
+   "sets": 4,
+   "weight": 70,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Remo en T agarre neutro",
+   "session": 4,
+   "sets": 4,
+   "weight": 70,
+   "reps": 6
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Remo en T agarre neutro",
+   "session": 5,
+   "sets": 4,
+   "weight": 60,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Remo en T agarre neutro",
+   "session": 6,
+   "sets": 4,
+   "weight": 70,
+   "reps": 5
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Jalon al pecho",
+   "session": 1,
+   "sets": 3,
+   "weight": 82,
+   "reps": 10
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Jalon al pecho",
+   "session": 2,
+   "sets": 3,
+   "weight": 82,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Jalon al pecho",
+   "session": 3,
+   "sets": 3,
+   "weight": 86,
+   "reps": 6
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Jalon al pecho",
+   "session": 4,
+   "sets": 3,
+   "weight": 86,
+   "reps": 7
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Jalon al pecho",
+   "session": 5,
+   "sets": 3,
+   "weight": 86,
+   "reps": 6
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Jalon al pecho",
+   "session": 6,
+   "sets": 3,
+   "weight": 87,
+   "reps": 7
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "face pull en polea",
+   "session": 1,
+   "sets": 3,
+   "weight": 27,
+   "reps": 18
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Pullover en máquina",
+   "session": 2,
+   "sets": 3,
+   "weight": 40,
+   "reps": 18
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Pullover en máquina",
+   "session": 3,
+   "sets": 3,
+   "weight": 45,
+   "reps": 16
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Pullover en máquina",
+   "session": 4,
+   "sets": 3,
+   "weight": 45,
+   "reps": 20
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Pullover en máquina",
+   "session": 5,
+   "sets": 3,
+   "weight": 50,
+   "reps": 15
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Pullover en máquina",
+   "session": 6,
+   "sets": 3,
+   "weight": 50,
+   "reps": 14
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "PAJAROS EN BANCO",
+   "session": 1,
+   "sets": 3,
+   "weight": 7.5,
+   "reps": 18
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Contractora inversa",
+   "session": 2,
+   "sets": 3,
+   "weight": 45,
+   "reps": 18
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "PAJAROS EN BANCO",
+   "session": 3,
+   "sets": 3,
+   "weight": 7.5,
+   "reps": 18
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "PAJAROS EN BANCO",
+   "session": 4,
+   "sets": 3,
+   "weight": 10,
+   "reps": 16
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Contractora inversa",
+   "session": 5,
+   "sets": 3,
+   "weight": 45,
+   "reps": 16
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "PAJAROS EN BANCO",
+   "session": 6,
+   "sets": 3,
+   "weight": 7.5,
+   "reps": 16
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Curl con mancuernas de pie unilateral",
+   "session": 1,
+   "sets": 3,
+   "weight": 17.5,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Curl con mancuernas de pie unilateral",
+   "session": 2,
+   "sets": 3,
+   "weight": 20,
+   "reps": 6
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Curl con mancuernas de pie unilateral",
+   "session": 3,
+   "sets": 2,
+   "weight": 20,
+   "reps": 7
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Curl con mancuernas de pie unilateral",
+   "session": 4,
+   "sets": 3,
+   "weight": 12.5,
+   "reps": 12
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Curl con mancuernas de pie unilateral",
+   "session": 5,
+   "sets": 3,
+   "weight": 17.5,
+   "reps": 12
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "CURL MARTILLO SENTADO",
+   "session": 1,
+   "sets": 3,
+   "weight": 15,
+   "reps": 16
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Curl martillo de pie unilateral",
+   "session": 2,
+   "sets": 3,
+   "weight": 25,
+   "reps": 14
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Curl martillo de pie unilateral",
+   "session": 3,
+   "sets": 3,
+   "weight": 20,
+   "reps": 18
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "CURL MARTILLO SENTADO",
+   "session": 4,
+   "sets": 2,
+   "weight": 15,
+   "reps": 22
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "CURL MARTILLO SENTADO",
+   "session": 5,
+   "sets": 3,
+   "weight": 17.5,
+   "reps": 22
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "CURL MARTILLO SENTADO",
+   "session": 6,
+   "sets": 3,
+   "weight": 20,
+   "reps": 24
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "CURL Scott en máquina",
+   "session": 1,
+   "sets": 3,
+   "weight": 36,
+   "reps": 16
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "CURL Scott en máquina",
+   "session": 2,
+   "sets": 3,
+   "weight": 36,
+   "reps": 18
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "CURL Scott en máquina",
+   "session": 3,
+   "sets": 3,
+   "weight": 36,
+   "reps": 20
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "CURL Scott en máquina",
+   "session": 4,
+   "sets": 3,
+   "weight": 36,
+   "reps": 19
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "CURL Scott en máquina",
+   "session": 5,
+   "sets": 3,
+   "weight": 41,
+   "reps": 17
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Remo en T agarre neutro",
+   "session": 7,
+   "sets": 4,
+   "weight": 70,
+   "reps": 4
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Jalon al pecho",
+   "session": 7,
+   "sets": 3,
+   "weight": 86,
+   "reps": 8
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Pullover en máquina",
+   "session": 7,
+   "sets": 3,
+   "weight": 50,
+   "reps": 12
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "PAJAROS EN BANCO",
+   "session": 7,
+   "sets": 3,
+   "weight": 7.5,
+   "reps": 14
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "Curl con mancuernas de pie unilateral",
+   "session": 7,
+   "sets": 3,
+   "weight": 20,
+   "reps": 6
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "CURL MARTILLO SENTADO",
+   "session": 7,
+   "sets": 2,
+   "weight": 22.5,
+   "reps": 12
+  },
+  {
+   "routine": "old-3",
+   "day": 4,
+   "name": "CURL Scott en máquina",
+   "session": 7,
+   "sets": 3,
+   "weight": 41,
+   "reps": 14
+  },
+  {
+   "routine": "old-4",
+   "day": 1,
+   "name": "Jalón al pecho agarre neutro",
+   "session": 1,
+   "sets": 3,
+   "weight": 68,
+   "reps": 7
+  },
+  {
+   "routine": "old-4",
+   "day": 1,
+   "name": "Jalón al pecho agarre neutro",
+   "session": 2,
+   "sets": 3,
+   "weight": 68,
+   "reps": 10
+  },
+  {
+   "routine": "old-4",
+   "day": 1,
+   "name": "Remo en T",
+   "session": 1,
+   "sets": 3,
+   "weight": 50,
+   "reps": 7
+  },
+  {
+   "routine": "old-4",
+   "day": 1,
+   "name": "Remo en T",
+   "session": 2,
+   "sets": 3,
+   "weight": 50,
+   "reps": 5
+  },
+  {
+   "routine": "old-4",
+   "day": 1,
+   "name": "Pullover con cuerda",
+   "session": 1,
+   "sets": 3,
+   "weight": 30,
+   "reps": 18
+  },
+  {
+   "routine": "old-4",
+   "day": 1,
+   "name": "Pullover con cuerda",
+   "session": 2,
+   "sets": 3,
+   "weight": 40,
+   "reps": 14
+  },
+  {
+   "routine": "old-4",
+   "day": 1,
+   "name": "Contractora inversa",
+   "session": 1,
+   "sets": 3,
+   "weight": 32,
+   "reps": 14
+  },
+  {
+   "routine": "old-4",
+   "day": 1,
+   "name": "Contractora inversa",
+   "session": 2,
+   "sets": 3,
+   "weight": 32,
+   "reps": 18
+  },
+  {
+   "routine": "old-4",
+   "day": 1,
+   "name": "Spider curl barra Z",
+   "session": 1,
+   "sets": 3,
+   "weight": 10,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 1,
+   "name": "Spider curl barra Z",
+   "session": 2,
+   "sets": 3,
+   "weight": 10,
+   "reps": 10
+  },
+  {
+   "routine": "old-4",
+   "day": 1,
+   "name": "Curl martillo de pie unilateral",
+   "session": 1,
+   "sets": 3,
+   "weight": 17.5,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 1,
+   "name": "Curl martillo de pie unilateral",
+   "session": 2,
+   "sets": 3,
+   "weight": 17.5,
+   "reps": 16
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Press inclinado con mancuernas",
+   "session": 1,
+   "sets": 3,
+   "weight": 25,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Superior en palanca agarre neutro",
+   "session": 1,
+   "sets": 3,
+   "weight": 20,
+   "reps": 12
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Superior en palanca agarre neutro",
+   "session": 2,
+   "sets": 3,
+   "weight": 25,
+   "reps": 11
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Banco plano en palanca",
+   "session": 3,
+   "sets": 3,
+   "weight": 35,
+   "reps": 10
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Contractora/Aperturas laterales",
+   "session": 2,
+   "sets": 3,
+   "weight": 59,
+   "reps": 10
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Contractora/Aperturas laterales",
+   "session": 3,
+   "sets": 3,
+   "weight": 52,
+   "reps": 15
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Superior en palanca agarre abierto",
+   "session": 1,
+   "sets": 3,
+   "weight": 15,
+   "reps": 15
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Superior en palanca agarre abierto",
+   "session": 2,
+   "sets": 3,
+   "weight": 15,
+   "reps": 17
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Superior en palanca agarre abierto",
+   "session": 3,
+   "sets": 3,
+   "weight": 15,
+   "reps": 17
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Elevaciones laterales en palanca",
+   "session": 1,
+   "sets": 3,
+   "weight": 25,
+   "reps": 10
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Elevaciones laterales en palanca",
+   "session": 2,
+   "sets": 3,
+   "weight": 25,
+   "reps": 12
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Elevaciones laterales en palanca",
+   "session": 3,
+   "sets": 3,
+   "weight": 10,
+   "reps": 12
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Extensor de codo polea baja katana",
+   "session": 1,
+   "sets": 3,
+   "weight": 36,
+   "reps": 6
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Extensor de codo polea baja katana",
+   "session": 2,
+   "sets": 3,
+   "weight": 36,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Extensor de codo polea baja katana",
+   "session": 3,
+   "sets": 3,
+   "weight": 41,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Extensor de codo polea alta rodillas",
+   "session": 1,
+   "sets": 2,
+   "weight": 41,
+   "reps": 9
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Extensor de codo polea alta rodillas",
+   "session": 2,
+   "sets": 3,
+   "weight": 45.4,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Extensor de codo polea alta rodillas",
+   "session": 3,
+   "sets": 3,
+   "weight": 45,
+   "reps": 11
+  },
+  {
+   "routine": "old-4",
+   "day": 2,
+   "name": "Extensor de codo polea alta rodillas",
+   "session": 4,
+   "sets": 3,
+   "weight": 41,
+   "reps": 11
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Aductores en maquina",
+   "session": 1,
+   "sets": 4,
+   "weight": 66,
+   "reps": 6
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Aductores en maquina",
+   "session": 2,
+   "sets": 4,
+   "weight": 66,
+   "reps": 6
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Aductores en maquina",
+   "session": 3,
+   "sets": 4,
+   "weight": 66,
+   "reps": 6
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Sentadilla Hack / Pendular",
+   "session": 1,
+   "sets": 3,
+   "weight": 20,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Extensor de cuadriceps",
+   "session": 1,
+   "sets": 3,
+   "weight": 79,
+   "reps": 6
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Extensor de cuadriceps",
+   "session": 2,
+   "sets": 3,
+   "weight": 79,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Extensor de cuadriceps",
+   "session": 3,
+   "sets": 3,
+   "weight": 79,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Curl femoral",
+   "session": 1,
+   "sets": 2,
+   "weight": 23,
+   "reps": 13
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Curl femoral",
+   "session": 2,
+   "sets": 3,
+   "weight": 27,
+   "reps": 12
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Curl femoral",
+   "session": 3,
+   "sets": 3,
+   "weight": 27,
+   "reps": 12
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Aductores en maquina",
+   "session": 1,
+   "sets": 3,
+   "weight": 32,
+   "reps": 18
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Aductores en maquina",
+   "session": 2,
+   "sets": 3,
+   "weight": 32,
+   "reps": 18
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Aductores en maquina",
+   "session": 3,
+   "sets": 3,
+   "weight": 39,
+   "reps": 18
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Gemelo en prensa",
+   "session": 1,
+   "sets": 3,
+   "weight": 86,
+   "reps": 18
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Gemelo en prensa",
+   "session": 2,
+   "sets": 3,
+   "weight": 86,
+   "reps": 20
+  },
+  {
+   "routine": "old-4",
+   "day": 3,
+   "name": "Gemelo en prensa",
+   "session": 3,
+   "sets": 3,
+   "weight": 93,
+   "reps": 20
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Remo en T",
+   "session": 1,
+   "sets": 3,
+   "weight": 50,
+   "reps": 7
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Remo en T",
+   "session": 2,
+   "sets": 3,
+   "weight": 50,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Remo en T",
+   "session": 3,
+   "sets": 3,
+   "weight": 50,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Remo unilateral en polea",
+   "session": 1,
+   "sets": 3,
+   "weight": 52,
+   "reps": 10
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Remo unilateral en polea",
+   "session": 2,
+   "sets": 3,
+   "weight": 59,
+   "reps": 9
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Remo unilateral en polea",
+   "session": 3,
+   "sets": 3,
+   "weight": 59,
+   "reps": 10
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Jalón al pecho agarre neutro",
+   "session": 1,
+   "sets": 3,
+   "weight": 45,
+   "reps": 17
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Jalón al pecho agarre neutro",
+   "session": 2,
+   "sets": 3,
+   "weight": 50,
+   "reps": 16
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Jalón al pecho agarre neutro",
+   "session": 3,
+   "sets": 3,
+   "weight": 50,
+   "reps": 17
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Elevaciones de hombro",
+   "session": 1,
+   "sets": 3,
+   "weight": 60,
+   "reps": 16
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Elevaciones de hombro",
+   "session": 2,
+   "sets": 3,
+   "weight": 60,
+   "reps": 16
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Elevaciones de hombro",
+   "session": 3,
+   "sets": 3,
+   "weight": 60,
+   "reps": 16
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Curl con mancuernas de pie unilateral",
+   "session": 1,
+   "sets": 3,
+   "weight": 15,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Curl con mancuernas de pie unilateral",
+   "session": 2,
+   "sets": 3,
+   "weight": 15,
+   "reps": 9
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Curl con mancuernas de pie unilateral",
+   "session": 3,
+   "sets": 3,
+   "weight": 17.5,
+   "reps": 7
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Curl martillo de pie unilateral",
+   "session": 1,
+   "sets": 2,
+   "weight": 15,
+   "reps": 14
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Curl martillo de pie unilateral",
+   "session": 2,
+   "sets": 2,
+   "weight": 15,
+   "reps": 18
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Curl martillo de pie unilateral",
+   "session": 3,
+   "sets": 2,
+   "weight": 17.5,
+   "reps": 16
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Curl de bíceps Scott",
+   "session": 1,
+   "sets": 3,
+   "weight": 29.3,
+   "reps": 10
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Curl de bíceps Scott",
+   "session": 2,
+   "sets": 3,
+   "weight": 27,
+   "reps": 17
+  },
+  {
+   "routine": "old-4",
+   "day": 4,
+   "name": "Curl de bíceps Scott",
+   "session": 3,
+   "sets": 3,
+   "weight": 27,
+   "reps": 17
+  },
+  {
+   "routine": "old-4",
+   "day": 5,
+   "name": "Press inclinado multipower",
+   "session": 1,
+   "sets": 3,
+   "weight": 22.5,
+   "reps": 5
+  },
+  {
+   "routine": "old-4",
+   "day": 5,
+   "name": "Press inclinado multipower",
+   "session": 2,
+   "sets": 3,
+   "weight": 20,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 5,
+   "name": "Contractora/Aperturas laterales",
+   "session": 1,
+   "sets": 3,
+   "weight": 79,
+   "reps": 10
+  },
+  {
+   "routine": "old-4",
+   "day": 5,
+   "name": "Contractora/Aperturas laterales",
+   "session": 2,
+   "sets": 3,
+   "weight": 79,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 5,
+   "name": "Contractora/Aperturas laterales",
+   "session": 3,
+   "sets": 3,
+   "weight": 66,
+   "reps": 12
+  },
+  {
+   "routine": "old-4",
+   "day": 5,
+   "name": "Press militar",
+   "session": 1,
+   "sets": 4,
+   "weight": 15,
+   "reps": 12
+  },
+  {
+   "routine": "old-4",
+   "day": 5,
+   "name": "Press militar",
+   "session": 2,
+   "sets": 4,
+   "weight": 20,
+   "reps": 10
+  },
+  {
+   "routine": "old-4",
+   "day": 5,
+   "name": "Elevaciones laterales en palanca",
+   "session": 1,
+   "sets": 4,
+   "weight": 25,
+   "reps": 14
+  },
+  {
+   "routine": "old-4",
+   "day": 5,
+   "name": "Elevaciones laterales en palanca",
+   "session": 2,
+   "sets": 4,
+   "weight": 25,
+   "reps": 16
+  },
+  {
+   "routine": "old-4",
+   "day": 5,
+   "name": "Extensor de codo rodillas",
+   "session": 1,
+   "sets": 3,
+   "weight": 36,
+   "reps": 7
+  },
+  {
+   "routine": "old-4",
+   "day": 5,
+   "name": "Extensor de codo rodillas",
+   "session": 2,
+   "sets": 3,
+   "weight": 36,
+   "reps": 8
+  },
+  {
+   "routine": "old-4",
+   "day": 5,
+   "name": "Extensor de codo polea alta tumbado",
+   "session": 1,
+   "sets": 2,
+   "weight": 28,
+   "reps": 18
+  },
+  {
+   "routine": "old-4",
+   "day": 5,
+   "name": "Extensor de codo polea alta tumbado",
+   "session": 2,
+   "sets": 2,
+   "weight": 36,
+   "reps": 14
+  }
+ ]
+}

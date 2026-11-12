@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useStore, actions } from '../lib/store.js';
 import { recommend, appliedMode, MODES, MODE_HINT, iso, weekKey } from '../lib/plan.js';
-import { weeks, currentWeek } from '../lib/program.js';
+import { weeks, currentWeek, lastWeekIndex, NEXT, schedule } from '../lib/program.js';
+import { daysUntil, fmtLong, fmtShort } from '../lib/schedule.js';
 import { ChevronLeft, ChevronRight, PlusIcon, StarIcon, TrashIcon } from '../components/Icons.jsx';
 
 const TYPES = { comp: 'Competición / Prueba', trip: 'Viaje / Parada', otro: 'Otro' };
@@ -31,13 +32,14 @@ function EventForm({ onClose }) {
   );
 }
 
-function Calendar({ events, sessions }) {
+function Calendar({ events, sessions, startIso, deloads }) {
   const [m, setM] = useState(() => { const d = new Date(); return new Date(d.getFullYear(), d.getMonth(), 1); });
   const first = (m.getDay() + 6) % 7;
   const n = new Date(m.getFullYear(), m.getMonth() + 1, 0).getDate();
   const today = iso(Date.now());
   const cells = [...Array(first).fill(null), ...Array.from({ length: n }, (_, i) => iso(new Date(m.getFullYear(), m.getMonth(), i + 1).getTime()))];
-  const done = new Set(sessions.filter((s) => s.finishedAt).map((s) => iso(s.finishedAt)));
+  const done = new Set(sessions.filter((s) => s.finishedAt && !s.skipped).map((s) => iso(s.finishedAt)));
+  const isDeload = (k) => deloads.some((w) => w.mon <= k && k <= w.sun);
   const evOn = (k) => events.some((e) => e.date <= k && k <= (e.endDate || e.date));
   return (
     <section className="card mt-4 p-4" aria-label="Calendario">
@@ -50,23 +52,27 @@ function Calendar({ events, sessions }) {
         {[...'LMXJVSD'].map((d, i) => <span key={i} className="text-[11px] text-muted">{d}</span>)}
         {cells.map((k, i) => k ? (
           <div key={i} className="flex flex-col items-center">
-            <span className={`grid h-9 w-9 place-items-center rounded-full text-[14px] ${k === today ? 'bg-brand font-semibold text-onbrand' : evOn(k) ? 'bg-hot/20 font-semibold text-hot' : ''}`}>{Number(k.slice(8))}</span>
+            <span className={`grid h-9 w-9 place-items-center rounded-full text-[14px] ${k === today ? 'bg-brand font-semibold text-onbrand' : evOn(k) ? 'bg-hot/20 font-semibold text-hot' : isDeload(k) ? 'bg-rest/20 font-semibold text-rest' : ''} ${k === startIso ? 'ring-2 ring-brand' : ''}`}>{Number(k.slice(8))}</span>
             <span className={`mt-0.5 h-1.5 w-1.5 rounded-full ${done.has(k) ? 'bg-brand' : ''}`} />
           </div>
         ) : <span key={i} />)}
       </div>
-      <p className="mt-2 flex items-center gap-3 text-[11px] text-muted"><span className="inline-block h-1.5 w-1.5 rounded-full bg-brand" /> entreno hecho <span className="inline-block h-2.5 w-2.5 rounded-full bg-hot/40" /> evento</p>
+      <p className="mt-2 flex items-center gap-3 text-[11px] text-muted"><span className="inline-block h-1.5 w-1.5 rounded-full bg-brand" /> entreno hecho <span className="inline-block h-2.5 w-2.5 rounded-full bg-hot/40" /> evento <span className="inline-block h-2.5 w-2.5 rounded-full bg-rest/40" /> descarga{startIso && <><span className="inline-block h-2.5 w-2.5 rounded-full ring-2 ring-brand" /> rutina nueva</>}</p>
     </section>
   );
 }
 
-export default function Plan() {
+export default function Plan({ go }) {
   const st = useStore();
   const [adding, setAdding] = useState(false);
   const events = st.events.filter((e) => !e.deleted).sort((a, b) => a.date.localeCompare(b.date));
   const rec = recommend(events);
   const key = weekKey(Date.now());
   const applied = appliedMode(st.modes);
+  const sch = schedule(st);
+  const startIso = sch.nextStart;
+  const deloads = [...sch.mine, ...sch.next].filter((w) => w.deload);
+  const todayIso = iso(Date.now());
   const upcoming = events.filter((e) => (e.endDate || e.date) >= iso(Date.now()));
 
   return (
@@ -100,7 +106,28 @@ export default function Plan() {
         )}
       </section>
 
-      <Calendar events={events} sessions={st.sessions} />
+      {startIso && (
+        <section className="card mt-4 p-4" aria-label="Siguiente rutina">
+          <p className="text-[12px] text-muted">Siguiente rutina · empieza al acabar la actual ({weeks[lastWeekIndex]})</p>
+          <h2 className="mt-1 text-[18px]">{NEXT.title}</h2>
+          <p className="mt-1 text-[15px] font-semibold capitalize">{fmtLong(startIso)}</p>
+          <p className="text-[13px] text-muted">{daysUntil(startIso) > 0 ? `En ${daysUntil(startIso)} días · ` : ''}Estimada desde tu semana actual ({weeks[currentWeek(st)]}); se mueve sola si cambias de semana.</p>
+          <button onClick={() => go('routines')} className="tap mt-3 h-11 w-full rounded-pill bg-card2 text-[14px] font-semibold">Ver rutina</button>
+        </section>
+      )}
+
+      <Calendar events={events} sessions={st.sessions} startIso={startIso} deloads={deloads} />
+
+      <section className="card mt-4 p-4" aria-label="Semanas de descarga">
+        <h2 className="text-[16px]">Semanas de descarga</h2>
+        <ul className="mt-2 space-y-1 text-[14px]">
+          {deloads.filter((w) => w.sun >= todayIso).map((w) => (
+            <li key={w.mon} className="flex justify-between"><span>{w.label}{w.mon > (startIso ?? '9999') ? ` · ${NEXT.short}` : ''}</span><span className="text-muted">{fmtShort(w.mon)} – {fmtShort(w.sun)}</span></li>
+          ))}
+          {!deloads.some((w) => w.sun >= todayIso) && <li className="text-muted">Ninguna pendiente.</li>}
+        </ul>
+        <p className="mt-2 text-[12px] text-muted">Esa semana los pesos salen al {Math.round(st.settings.deload * 100)} % de tu último entreno (se cambia en Ajustes).</p>
+      </section>
 
       <h2 className="mt-6 text-[20px]">Próximos eventos</h2>
       <ul className="mt-3 space-y-2">

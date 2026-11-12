@@ -1,5 +1,6 @@
 // Sincronización local-first: pull → fusionar → push contra un Worker de Cloudflare (KV). Clave personal en el dispositivo.
 import { actions, getState, onChange } from './store.js';
+import { ACTIVE_ID } from './program.js';
 
 export const DEFAULT_URL = import.meta.env.VITE_SYNC_URL || '';
 let busy = false, timer = null, dirty = false;
@@ -17,6 +18,8 @@ export async function syncNow() {
     if (!r.ok && r.status !== 404) throw new Error(`GET ${r.status}`);
     const remote = r.status === 404 ? null : await r.json();
     const merged = actions.mergeRemote(remote);
+    // Otro dispositivo cambió de rutina: recarga para cargar sus días.
+    if ((getState().settings.activeRoutine || 'current') !== ACTIVE_ID) { location.reload(); return; }
     const p = await fetch(`${url}/data`, { method: 'PUT', headers: { ...h, 'Content-Type': 'application/json' }, body: JSON.stringify(merged) });
     if (!p.ok) throw new Error(`PUT ${p.status}`);
     actions.setDevice({ lastSync: Date.now(), syncMsg: '' });

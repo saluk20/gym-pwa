@@ -1,12 +1,13 @@
 import { useSyncExternalStore } from 'react';
 import { dayById, suggestionFor, stepOf, weeks, cursorOf, weekComplete, lastWeekIndex, DEFAULT_WEEK } from './program.js';
 import { weekKey } from './plan.js';
+import { anchorAfter, currentMonday, addDays, mondayOf, iso } from './schedule.js';
 import { armAlarm, disarmAlarm } from './feedback.js';
 import { warmupRows } from './program.js';
 
 const KEY = 'gym-pwa:v1';
 const DEFAULTS = {
-  settings: { name: 'Lucas', deload: 0.9, sound: true, steps: {}, weekIndex: DEFAULT_WEEK, updatedAt: 0 },
+  settings: { name: 'Lucas', deload: 0.9, sound: true, steps: {}, weekIndex: DEFAULT_WEEK, activeRoutine: 'current', updatedAt: 0 },
   sessions: [],
   events: [], // { id, title, date, endDate, type: 'comp'|'trip'|'otro', main, updatedAt, deleted }
   modes: {}, // { [lunes ISO]: { mode, updatedAt } } modo aplicado a esa semana ('' = quitado)
@@ -125,7 +126,7 @@ export const actions = {
       sessions: state.sessions.map((x) => (x.id === sid ? { ...x, sets, warm: Object.fromEntries(Object.entries(x.warm ?? {}).map(([k, a]) => [k, a.filter((r) => r.done)]).filter(([, a]) => a.length)), finishedAt: Date.now(), updatedAt: Date.now() } : x)),
     });
     // Semana completa (todos los días hechos) → avanza a la siguiente.
-    if (weekComplete(state) && state.settings.weekIndex < lastWeekIndex) actions.setSetting({ weekIndex: state.settings.weekIndex + 1 });
+    if (weekComplete(state) && state.settings.weekIndex < lastWeekIndex) actions.setWeek(state.settings.weekIndex + 1, false);
   },
   discardSession(sid) {
     commit({ ...state, rest: null, sessions: state.sessions.filter((x) => x.id !== sid) });
@@ -147,6 +148,28 @@ export const actions = {
   },
   setSetting(patch) {
     commit({ ...state, settings: { ...state.settings, ...patch, updatedAt: Date.now() } });
+  },
+  /** Cambia la semana del programa. manual=true (Ajustes): la elegida es la semana natural en curso; auto: sigue tras la actual. */
+  setWeek(idx, manual = true) {
+    const s = state.settings;
+    actions.setSetting({ weekIndex: idx, weekAnchor: anchorAfter(s, s.weekIndex, idx, manual) });
+  },
+  /** Salta un día esta semana (p. ej. pierna que no puedes hacer): cuenta como pasado para avanzar de semana, sin series ni estadísticas. */
+  skipDay(dayId) {
+    const now = Date.now();
+    commit({ ...state, sessions: [...state.sessions.filter((x) => x.finishedAt || x.dayId !== dayId), { id: `s${now}`, dayId, weekIndex: cursorOf(null, state), startedAt: now, finishedAt: now, skipped: true, sets: {}, warm: {}, updatedAt: now }] });
+    if (weekComplete(state) && state.settings.weekIndex < lastWeekIndex) actions.setWeek(state.settings.weekIndex + 1, false);
+  },
+  /** Cambia de rutina (solo con la actual terminada). La app se recarga para cargar los días de la nueva; empieza en la semana 1. */
+  activateRoutine(id) {
+    if (state.sessions.some((x) => !x.finishedAt)) actions.discardOpenSessions();
+    const start = addDays(currentMonday(state.settings, state.settings.weekIndex), 7 * (lastWeekIndex - state.settings.weekIndex + 1));
+    const today = iso(mondayOf(Date.now()));
+    actions.setSetting({ activeRoutine: id, weekIndex: 0, weekAnchor: { idx: 0, mon: start > today ? start : today } });
+    globalThis.location?.reload();
+  },
+  discardOpenSessions() {
+    commit({ ...state, rest: null, sessions: state.sessions.filter((x) => x.finishedAt) });
   },
   setStep(exId, step) {
     commit({ ...state, settings: { ...state.settings, steps: { ...state.settings.steps, [exId]: step }, updatedAt: Date.now() } });

@@ -1,5 +1,5 @@
-import { useStore, activeSession } from '../lib/store.js';
-import { days, nextDay, cursorOf, dayDone, weeks, weekStats, plannedSets, estMinutes, isDeloadWeek } from '../lib/program.js';
+import { useStore, activeSession, actions } from '../lib/store.js';
+import { days, nextDay, cursorOf, dayDone, weeks, weekStats, plannedSets, estMinutes, isDeloadWeek, routineFinished, ACTIVE_ID, NEXT } from '../lib/program.js';
 import { recommend, appliedMode, MODES, iso, weekKey } from '../lib/plan.js';
 import { fmtNum } from '../lib/feedback.js';
 import { Rings } from '../components/Ring.jsx';
@@ -31,7 +31,7 @@ function WeekStrip({ st }) {
       {Array.from({ length: 7 }, (_, i) => {
         const d = new Date(mon); d.setDate(mon.getDate() + i);
         const key = iso(d.getTime());
-        const did = st.sessions.some((s) => s.finishedAt && iso(s.finishedAt) === key);
+        const did = st.sessions.some((s) => s.finishedAt && !s.skipped && iso(s.finishedAt) === key);
         const star = st.events.some((e) => !e.deleted && e.date <= key && key <= (e.endDate || e.date));
         return (
           <div key={i} className="flex flex-col items-center gap-1">
@@ -73,7 +73,15 @@ export default function Home({ go, openWorkout }) {
           <span className="min-w-0 truncate text-[14px]"><b>{open ? 'EN CURSO' : 'HOY'} · Día {(open ? open.dayId.slice(1) : next.n)}</b> · {weeks[cursorOf(next, st)]}</span>
           <span className="rounded-pill bg-brand px-4 py-2 text-[13px] font-semibold text-onbrand">{open ? 'Continuar' : 'Empezar'}</span>
         </button>
+        {!open && <button onClick={() => confirm(`¿Saltar el Día ${next.n} esta semana? Cuenta como pasado y no registra nada.`) && actions.skipDay(next.id)} className="tap mt-2 w-full text-center text-[12px] text-muted underline">No puedo hacer el Día {next.n} · saltar</button>}
       </section>
+
+      {ACTIVE_ID === 'current' && routineFinished(st) && (
+        <button onClick={() => go('routines')} className="tap card mt-3 flex w-full items-center gap-3 p-4 text-left">
+          <span className="rounded-pill bg-brand px-3 py-1 text-[12px] font-semibold uppercase text-onbrand">Nueva</span>
+          <span className="min-w-0 flex-1 truncate text-[13px]">Terminaste la rutina. Activa «{NEXT.title}».</span>
+        </button>
+      )}
 
       {(mode || rec) && (
         <button onClick={() => go('plan')} className="tap card mt-3 flex w-full items-center gap-3 p-4 text-left">

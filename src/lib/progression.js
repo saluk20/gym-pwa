@@ -3,6 +3,8 @@
 // Si no, mismo peso y +1 rep (acotado al rango). "fallo": siempre +1 rep, nunca sube peso.
 // Semana "Descarga": peso = último × factor (ajustes), mismas reps.
 
+import { KEY_BY_ID, isDeloadSession } from './history.js';
+
 export const DEFAULT_STEP = 2.5;
 
 export const roundTo = (v, step) => Math.round(v / step) * step;
@@ -22,16 +24,20 @@ export function topSet(sets) {
  * si no hay, usa el último dato del Excel.
  */
 export function lastPerformance(ex, sessions) {
+  // Una sesión cuenta si registró este ejercicio o su equivalente de otra rutina (misma clave).
+  const key = ex.key ?? ex.id;
+  const idOf = (s) => Object.keys(s.sets).find((id) => (KEY_BY_ID[id] ?? id) === key);
   const done = sessions
-    .filter((s) => s.finishedAt && s.sets[ex.id])
+    .filter((s) => s.finishedAt && idOf(s) && !isDeloadSession(s))
     .sort((a, b) => b.finishedAt - a.finishedAt);
   for (const s of done) {
-    const top = topSet(s.sets[ex.id].filter((x) => x.done));
+    const top = topSet(s.sets[idOf(s)].filter((x) => x.done));
     if (top) return { ...top, source: 'app', at: s.finishedAt, weekIndex: s.weekIndex };
   }
   const validHistory = ex.history.filter((x) => !x.alt);
   const h = (validHistory.length ? validHistory : ex.history).slice().sort((a, b) => b.w - a.w)[0];
   if (h) return { weight: h.weight, minReps: h.reps, count: 1, source: 'xls', weekIndex: h.w, note: h.note };
+  if (ex.seed) return { weight: ex.seed.weight, minReps: ex.seed.reps, count: 1, source: 'prev', note: `Rutina anterior · ${ex.seed.from}` };
   return null;
 }
 

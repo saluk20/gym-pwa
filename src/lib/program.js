@@ -1,8 +1,19 @@
 // Estado derivado del programa: semana actual por día, siguiente día, métricas semanales.
-import routine from '../data/routine.json' with { type: 'json' };
+import currentRoutine from '../data/routine.json' with { type: 'json' };
+import nextRoutine from '../data/next-routine.json' with { type: 'json' };
 import { lastPerformance, suggest, DEFAULT_STEP } from './progression.js';
+import { keyOf } from './exkey.js';
+import { currentMonday, nextStartIso, routineWeeks, addDays } from './schedule.js';
 
+/** Rutina activa: la elige el ajuste `activeRoutine` (se lee al cargar; al cambiarla la app se recarga). */
+const stored = (() => { try { return JSON.parse(globalThis.localStorage?.getItem('gym-pwa:v1'))?.settings?.activeRoutine; } catch { return null; } })();
+export const ACTIVE_ID = stored === 'next' ? 'next' : 'current';
+export const routineOf = (id) => (id === 'next' ? nextRoutine : currentRoutine);
+const routine = routineOf(ACTIVE_ID);
 export const { days, weeks } = routine;
+for (const d of days) for (const e of d.exercises) e.key = keyOf(e.name);
+export const NEXT = nextRoutine;
+export const CURRENT = currentRoutine;
 export const dayById = (id) => days.find((d) => d.id === id);
 export const exById = (id) => days.flatMap((d) => d.exercises).find((e) => e.id === id);
 const LAST_WEEK = weeks.length - 1;
@@ -26,6 +37,8 @@ export const nextDay = (state) => days.find((d) => !dayDone(d, state)) ?? days[0
 /** Si todos los días están hechos en la semana actual, pasa a la siguiente. */
 export const weekComplete = (state) => days.every((d) => dayDone(d, state));
 export const lastWeekIndex = LAST_WEEK;
+/** La rutina actual terminó: última semana alcanzada y todos sus días hechos. */
+export const routineFinished = (state) => weekComplete(state) && currentWeek(state) >= LAST_WEEK;
 
 export const stepOf = (ex, settings) => settings.steps?.[ex.id] ?? DEFAULT_STEP;
 
@@ -74,7 +87,7 @@ const startOfWeek = (t) => {
 export function weekStats(sessions, now = Date.now()) {
   const w0 = startOfWeek(now);
   const prev0 = w0 - 7 * 864e5;
-  const fin = sessions.filter((s) => s.finishedAt);
+  const fin = sessions.filter((s) => s.finishedAt && !s.skipped);
   const cur = fin.filter((s) => s.finishedAt >= w0);
   const prev = fin.filter((s) => s.finishedAt >= prev0 && s.finishedAt < w0);
   const sum = (arr, f) => arr.reduce((a, s) => a + f(s), 0);
@@ -87,30 +100,10 @@ export function weekStats(sessions, now = Date.now()) {
   };
 }
 
-/** Serie temporal de un ejercicio: Excel + sesiones de la app. score = peso × reps del set top. */
-export function timeline(ex, sessions) {
-  const pts = ex.history.map((h) => ({
-    label: weeks[h.w].replace('Semana ', 'S'),
-    weight: h.weight,
-    reps: h.reps,
-    score: h.weight * h.reps,
-    src: 'xls',
-  }));
-  sessions
-    .filter((s) => s.finishedAt && s.sets[ex.id])
-    .sort((a, b) => a.finishedAt - b.finishedAt)
-    .forEach((s) => {
-      const done = s.sets[ex.id].filter((x) => x.done && x.r > 0);
-      if (!done.length) return;
-      const best = done.reduce((a, b) => ((b.w || 0) * b.r > (a.w || 0) * a.r ? b : a));
-      pts.push({
-        label: weeks[s.weekIndex].replace('Semana ', 'S'),
-        weight: best.w || 0,
-        reps: best.r,
-        score: (best.w || 0) * best.r,
-        src: 'app',
-        at: s.finishedAt,
-      });
-    });
-  return pts;
+/** Fechas del programa: semanas de la rutina activa y, si aún no acabó, de la siguiente (con su día de inicio). */
+export function schedule(state, now = Date.now()) {
+  const wi = currentWeek(state);
+  const mine = routineWeeks(weeks, addDays(currentMonday(state.settings, wi, now), -7 * wi));
+  const nextStart = ACTIVE_ID === 'current' ? nextStartIso(state.settings, wi, LAST_WEEK, now) : null;
+  return { mine, nextStart, next: nextStart ? routineWeeks(nextRoutine.weeks, nextStart) : [] };
 }

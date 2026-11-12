@@ -57,7 +57,7 @@ function ExerciseCard({ ex, day, session, state, onSetDone }) {
         <span className={`rounded-pill px-2.5 py-1 font-semibold ${sug.kind === 'weight' ? 'bg-brand text-onbrand' : 'bg-card2 text-brand'}`}>{KIND_LABEL[sug.kind]}</span>
         {sug.last && (
           <span className="ml-2 text-muted">
-            Última: {fmtNum(sug.last.weight)} kg × {sug.last.minReps}{sug.last.source === 'xls' ? ' (Excel)' : ''}
+            Última: {fmtNum(sug.last.weight)} kg × {sug.last.minReps}{sug.last.source === 'xls' ? ' (Excel)' : sug.last.source === 'prev' ? ' (rutina anterior)' : ''}
           </span>
         )}
       </p>

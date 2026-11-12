@@ -49,9 +49,9 @@ export default function Profile({ go }) {
             <p className="text-[12px] text-muted">Igual para los 5 días. Avanza sola al completar todos.</p>
           </div>
           <div className="flex items-center gap-2">
-            <button aria-label="Semana anterior" className="tap grid h-10 w-10 place-items-center rounded-full bg-card2" onClick={() => actions.setSetting({ weekIndex: Math.max(0, wi - 1) })}>−</button>
+            <button aria-label="Semana anterior" className="tap grid h-10 w-10 place-items-center rounded-full bg-card2" onClick={() => actions.setWeek(Math.max(0, wi - 1))}>−</button>
             <span className="min-w-[78px] text-center text-[14px] font-semibold">{weeks[wi]}</span>
-            <button aria-label="Semana siguiente" className="tap grid h-10 w-10 place-items-center rounded-full bg-card2" onClick={() => actions.setSetting({ weekIndex: Math.min(lastWeekIndex, wi + 1) })}>+</button>
+            <button aria-label="Semana siguiente" className="tap grid h-10 w-10 place-items-center rounded-full bg-card2" onClick={() => actions.setWeek(Math.min(lastWeekIndex, wi + 1))}>+</button>
           </div>
         </Row>
         <label className="block">
